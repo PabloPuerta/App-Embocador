@@ -19,6 +19,13 @@ namespace PruebaASPNETEmbocador.Controllers
             return View();
         }
 
+        // GET: AdministrarUsuarios
+        public ActionResult AdministrarUsuarios()
+        {
+            var usuarios = db.Usuarios.ToList();
+            return View(usuarios);
+        }
+
 
         [HttpPost]
         public ActionResult Login(Usuarios IDUsuario)
@@ -26,10 +33,9 @@ namespace PruebaASPNETEmbocador.Controllers
 
             // Verificar si existe el nombre de usuario
             var usuarioExistente = db.Usuarios.FirstOrDefault(x => x.Nombre == IDUsuario.Nombre);
- 
 
             if (usuarioExistente != null)
-            { 
+            {
                 // Verificar si la contraseña es correcta
                 if (usuarioExistente.Contraseña == IDUsuario.Contraseña)
                 {
@@ -43,8 +49,11 @@ namespace PruebaASPNETEmbocador.Controllers
             }
             else
             {
-                return Json(new { succes = false, message = "No existe ningún usuario con el nombre especificado" }, JsonRequestBehavior.AllowGet);  
+                return Json(new { succes = false, message = "No existe ningún usuario con el nombre especificado" }, JsonRequestBehavior.AllowGet);
             }
         }
+
     }
+
 }
+   

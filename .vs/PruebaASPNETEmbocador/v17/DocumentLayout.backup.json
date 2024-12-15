@@ -1,26 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\pablo\\source\\repos\\PruebaASPNETEmbocador\\",
+  "WorkspaceRootPath": "C:\\Users\\pablo\\source\\repos\\Lokotope\\App-Embocador\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|c:\\users\\pablo\\source\\repos\\pruebaaspnetembocador\\pruebaaspnetembocador\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|solutionrelative:pruebaaspnetembocador\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|c:\\users\\pablo\\source\\repos\\pruebaaspnetembocador\\pruebaaspnetembocador\\views\\inicioadmins\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|solutionrelative:pruebaaspnetembocador\\views\\inicioadmins\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|C:\\Users\\pablo\\source\\repos\\PruebaASPNETEmbocador\\pruebaaspnetembocador\\controllers\\inicioadminscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|c:\\users\\pablo\\source\\repos\\lokotope\\app-embocador\\pruebaaspnetembocador\\controllers\\inicioadminscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|solutionrelative:pruebaaspnetembocador\\controllers\\inicioadminscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|C:\\Users\\pablo\\source\\repos\\PruebaASPNETEmbocador\\pruebaaspnetembocador\\assets\\css\\loginadminok.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|solutionrelative:pruebaaspnetembocador\\assets\\css\\loginadminok.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|C:\\Users\\pablo\\source\\repos\\Lokotope\\App-Embocador\\pruebaaspnetembocador\\assets\\css\\main.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|solutionrelative:pruebaaspnetembocador\\assets\\css\\main.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|C:\\Users\\pablo\\source\\repos\\PruebaASPNETEmbocador\\pruebaaspnetembocador\\assets\\css\\main.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|solutionrelative:pruebaaspnetembocador\\assets\\css\\main.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|C:\\Users\\pablo\\source\\repos\\Lokotope\\App-Embocador\\pruebaaspnetembocador\\views\\inicioadmins\\administrarusuarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|solutionrelative:pruebaaspnetembocador\\views\\inicioadmins\\administrarusuarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|C:\\Users\\pablo\\source\\repos\\Lokotope\\App-Embocador\\pruebaaspnetembocador\\views\\inicioadmins\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|solutionrelative:pruebaaspnetembocador\\views\\inicioadmins\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,76 +26,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 403,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 403,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "main.css",
-              "DocumentMoniker": "C:\\Users\\pablo\\source\\repos\\PruebaASPNETEmbocador\\PruebaASPNETEmbocador\\Assets\\css\\main.css",
+              "DocumentMoniker": "C:\\Users\\pablo\\source\\repos\\Lokotope\\App-Embocador\\PruebaASPNETEmbocador\\Assets\\css\\main.css",
               "RelativeDocumentMoniker": "PruebaASPNETEmbocador\\Assets\\css\\main.css",
-              "ToolTip": "C:\\Users\\pablo\\source\\repos\\PruebaASPNETEmbocador\\PruebaASPNETEmbocador\\Assets\\css\\main.css",
+              "ToolTip": "C:\\Users\\pablo\\source\\repos\\Lokotope\\App-Embocador\\PruebaASPNETEmbocador\\Assets\\css\\main.css",
               "RelativeToolTip": "PruebaASPNETEmbocador\\Assets\\css\\main.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJ4AAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAACABAAAAAAAAAAAAAKQBAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-12-11T20:57:27.271Z",
               "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "loginAdminOk.css",
-              "DocumentMoniker": "C:\\Users\\pablo\\source\\repos\\PruebaASPNETEmbocador\\PruebaASPNETEmbocador\\Assets\\css\\loginAdminOk.css",
-              "RelativeDocumentMoniker": "PruebaASPNETEmbocador\\Assets\\css\\loginAdminOk.css",
-              "ToolTip": "C:\\Users\\pablo\\source\\repos\\PruebaASPNETEmbocador\\PruebaASPNETEmbocador\\Assets\\css\\loginAdminOk.css",
-              "RelativeToolTip": "PruebaASPNETEmbocador\\Assets\\css\\loginAdminOk.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-11T20:58:34.89Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\pablo\\source\\repos\\PruebaASPNETEmbocador\\PruebaASPNETEmbocador\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "PruebaASPNETEmbocador\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\pablo\\source\\repos\\PruebaASPNETEmbocador\\PruebaASPNETEmbocador\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "PruebaASPNETEmbocador\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-14T20:08:48.784Z",
+              "Title": "InicioAdminsController.cs",
+              "DocumentMoniker": "C:\\Users\\pablo\\source\\repos\\Lokotope\\App-Embocador\\PruebaASPNETEmbocador\\Controllers\\InicioAdminsController.cs",
+              "RelativeDocumentMoniker": "PruebaASPNETEmbocador\\Controllers\\InicioAdminsController.cs",
+              "ToolTip": "C:\\Users\\pablo\\source\\repos\\Lokotope\\App-Embocador\\PruebaASPNETEmbocador\\Controllers\\InicioAdminsController.cs",
+              "RelativeToolTip": "PruebaASPNETEmbocador\\Controllers\\InicioAdminsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T20:10:31.691Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "InicioAdminsController.cs",
-              "DocumentMoniker": "C:\\Users\\pablo\\source\\repos\\PruebaASPNETEmbocador\\PruebaASPNETEmbocador\\Controllers\\InicioAdminsController.cs",
-              "RelativeDocumentMoniker": "PruebaASPNETEmbocador\\Controllers\\InicioAdminsController.cs",
-              "ToolTip": "C:\\Users\\pablo\\source\\repos\\PruebaASPNETEmbocador\\PruebaASPNETEmbocador\\Controllers\\InicioAdminsController.cs",
-              "RelativeToolTip": "PruebaASPNETEmbocador\\Controllers\\InicioAdminsController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwDEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T21:13:58.4Z",
-              "EditorCaption": ""
+              "Title": "administrarUsuarios.cshtml",
+              "DocumentMoniker": "C:\\Users\\pablo\\source\\repos\\Lokotope\\App-Embocador\\PruebaASPNETEmbocador\\Views\\InicioAdmins\\administrarUsuarios.cshtml",
+              "RelativeDocumentMoniker": "PruebaASPNETEmbocador\\Views\\InicioAdmins\\administrarUsuarios.cshtml",
+              "ToolTip": "C:\\Users\\pablo\\source\\repos\\Lokotope\\App-Embocador\\PruebaASPNETEmbocador\\Views\\InicioAdmins\\administrarUsuarios.cshtml",
+              "RelativeToolTip": "PruebaASPNETEmbocador\\Views\\InicioAdmins\\administrarUsuarios.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-15T20:03:40.626Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\pablo\\source\\repos\\PruebaASPNETEmbocador\\PruebaASPNETEmbocador\\Views\\InicioAdmins\\Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\pablo\\source\\repos\\Lokotope\\App-Embocador\\PruebaASPNETEmbocador\\Views\\InicioAdmins\\Login.cshtml",
               "RelativeDocumentMoniker": "PruebaASPNETEmbocador\\Views\\InicioAdmins\\Login.cshtml",
-              "ToolTip": "C:\\Users\\pablo\\source\\repos\\PruebaASPNETEmbocador\\PruebaASPNETEmbocador\\Views\\InicioAdmins\\Login.cshtml",
+              "ToolTip": "C:\\Users\\pablo\\source\\repos\\Lokotope\\App-Embocador\\PruebaASPNETEmbocador\\Views\\InicioAdmins\\Login.cshtml",
               "RelativeToolTip": "PruebaASPNETEmbocador\\Views\\InicioAdmins\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T20:56:15.726Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T20:56:15.726Z"
             }
           ]
         }
