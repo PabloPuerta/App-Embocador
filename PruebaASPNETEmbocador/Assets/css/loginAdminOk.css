@@ -1,0 +1,47 @@
+﻿body {
+    background: #9053c7;
+    background: -webkit-linear-gradient(-135deg, #e968e0, #431c67);
+    background: -o-linear-gradient(-135deg, #e968e0, #431c67);
+    background: -moz-linear-gradient(-135deg, #e968e0, #431c67);
+    background: linear-gradient(-135deg, #e968e0, #431c67);
+}
+
+.limiter {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.contenedorIdUsuario {
+    text-align: center;
+    background-color: white;
+    margin: 50px 25px 50px 25px;
+    padding-top: 25px;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+    .contenedorIdUsuario h1 {
+        font-weight: bolder;
+        color: black;
+    }
+
+.containerNav {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+}
+
+.barraNavAdmin {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.navLink{
+    font-size: 15px;
+    color: black;
+    padding-bottom: 15px;
+}
+    .navLink:hover {
+        color: #e968e0;
+    }

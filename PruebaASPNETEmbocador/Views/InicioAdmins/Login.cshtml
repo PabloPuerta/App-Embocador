@@ -1,0 +1,28 @@
+﻿@model PruebaASPNETEmbocador.Models.Usuarios
+
+
+@{
+    ViewBag.Title = "LoginOK";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" type="text/css" href="~/Assets/css/loginAdminOk.css">
+
+<div class="limiter">
+    <div class="contenedorIdUsuario">
+
+        <h1>Bienvenido @ViewBag.NombreUsuario</h1>
+        <br />
+        <h3>Panel de Administrador</h3>
+        
+        <div class="containerNav">
+            <nav class="barraNavAdmin">
+                @Html.ActionLink("Administrar usuarios", "Index", "Home", new { area = "", }, new { @class = "navLink" })
+                @Html.ActionLink("Turnos y horarios", "Index", "InicioAdmins", new { area = "" }, new { @class = "navLink" })
+                @Html.ActionLink("Gestionar mi usuario", "Contact", "Home", new { area = "" }, new { @class = "navLink" })
+            </nav>
+        </div>   
+        
+    </div>
+</div>
+
