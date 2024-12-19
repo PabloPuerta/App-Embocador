@@ -6,21 +6,11 @@ using System.Web.Mvc;
 
 namespace PruebaASPNETEmbocador.Controllers
 {
-    public class HomeController : Controller
+    public class InicioTrabajadoresController : Controller
     {
+        // GET: InicioTrabajadores
         public ActionResult Index()
         {
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-      
             return View();
         }
     }

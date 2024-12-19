@@ -25,13 +25,14 @@
     }
 
 .containerNav {
-    margin-top: 15px;
+    margin-top: 25px;
     display: flex;
     justify-content: center;
     font-weight: bolder;
 }
 
 .barraNavAdmin {
+    margin-top: 15px;
     display: flex;
     flex-direction: row;
     gap: 25px;

@@ -11,18 +11,25 @@
 <div class="limiter">
     <div class="contenedorIdUsuario">
 
-        <h1>Bienvenido @ViewBag.NombreUsuario</h1>
+        <h1>Bienvenido</h1>
+        <br />
+        <p style="font-weight: bolder;">@ViewBag.NombreUsuario</p>
         <br />
         <h3>Panel de Administrador</h3>
-        
+
         <div class="containerNav">
             <nav class="barraNavAdmin">
-                @Html.ActionLink("Administrar usuarios", "administrarUsuarios", "InicioAdmins", new { area = "", }, new { @class = "navLink" })
+                @Html.ActionLink("Administrar trabajadores", "Index", "Usuarios", new { area = "", }, new { @class = "navLink" })
                 @Html.ActionLink("Turnos y horarios", "Index", "InicioAdmins", new { area = "" }, new { @class = "navLink" })
                 @Html.ActionLink("Gestionar mi usuario", "Contact", "Home", new { area = "" }, new { @class = "navLink" })
             </nav>
-        </div>   
-        
+
+
+        </div>
+        <div>
+            <button style="background-color: black; color: white; border: 2px solid purple; padding: 10px; margin-bottom: 15px;">Cerrar sesión</button>
+        </div>
+
     </div>
 </div>
 

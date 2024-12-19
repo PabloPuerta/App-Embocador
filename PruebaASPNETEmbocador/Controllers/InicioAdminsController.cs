@@ -19,14 +19,8 @@ namespace PruebaASPNETEmbocador.Controllers
             return View();
         }
 
-        // GET: AdministrarUsuarios
-        public ActionResult AdministrarUsuarios()
-        {
-            var usuarios = db.Usuarios.ToList();
-            return View(usuarios);
-        }
 
-
+        // Método para validar el Login de un administrador en el sistema
         [HttpPost]
         public ActionResult Login(Usuarios IDUsuario)
         {
@@ -39,8 +33,14 @@ namespace PruebaASPNETEmbocador.Controllers
                 // Verificar si la contraseña es correcta
                 if (usuarioExistente.Contraseña == IDUsuario.Contraseña)
                 {
-                    ViewBag.NombreUsuario = usuarioExistente.Nombre;
-                    return View();
+                    if (usuarioExistente.IsAdmin) { 
+                        ViewBag.NombreUsuario = usuarioExistente.Nombre;
+                        return View();
+                    }
+                    else
+                    {
+                        return Json(new { succes = false, message = "El usuario no está dado de alta como administrador en el sistema." }, JsonRequestBehavior.AllowGet);
+                    }
                 }
                 else
                 {
