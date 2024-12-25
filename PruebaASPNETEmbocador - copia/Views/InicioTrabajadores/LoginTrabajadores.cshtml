@@ -1,0 +1,49 @@
+﻿@model PruebaASPNETEmbocador.Models.Usuarios
+
+@{
+    ViewBag.Title = "LoginTrabajadores";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" type="text/css" href="~/Assets/css/loginAdminOk.css">
+
+<div class="limiter">
+    <div class="contenedorIdUsuario">
+
+        <p>Ha iniciado sesión como: @ViewBag.NombreUsuario</p>
+        <br />
+        <h3>Panel de usuario</h3>
+        <br />
+
+        @if (TempData["Mensaje"] != null)
+        {
+            <script type="text/javascript">
+                alert('@TempData["Mensaje"] \nHora y Fecha último fichaje: @TempData["HoraFecha"]');
+            </script>
+        }
+
+        <div class="containerNav">
+
+            <nav class="barraNavAdmin">
+                @using (Html.BeginForm("RegistrarEntrada", "FicharTurnos", FormMethod.Post))
+                {
+                    <button type="submit" class="navLink" style="font-weight: bolder;">Registrar entrada</button>
+                }
+                @using (Html.BeginForm("RegistrarSalida", "FicharTurnos", FormMethod.Post))
+                {
+                    <button type="submit" class="navLink" style="font-weight: bolder;">Registrar salida</button>
+                }
+                @Html.ActionLink("Consultar mis turnos y horarios", "Index", "InicioAdmins", new { area = "" }, new { @class = "navLink" })
+                @Html.ActionLink("Gestionar mi usuario", "Edit", "Usuarios", new { id = Model.IDUsuario }, new { @class = "navLink" })
+            </nav>
+
+        </div>
+        <div style="margin-top: 50px; margin-bottom: 50px;">
+            @using (Html.BeginForm("Logout", "InicioAdmins", FormMethod.Post))
+            {
+                <button type="submit" class="btnCerrarSesion">Cerrar sesión</button>
+            }
+        </div>
+
+    </div>
+</div>

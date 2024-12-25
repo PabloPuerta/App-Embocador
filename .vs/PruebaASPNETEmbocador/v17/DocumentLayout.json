@@ -1,22 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\pablo\\Desktop\\App-Embocador-main (1)\\App-Embocador-main\\",
+  "WorkspaceRootPath": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|c:\\users\\pablo\\desktop\\app-embocador-main (1)\\app-embocador-main\\pruebaaspnetembocador\\assets\\css\\loginadminok.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|c:\\users\\pablo\\documents\\github\\app-embocador\\pruebaaspnetembocador\\views\\iniciotrabajadores\\logintrabajadores.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|solutionrelative:pruebaaspnetembocador\\views\\iniciotrabajadores\\logintrabajadores.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\pruebaaspnetembocador\\assets\\css\\loginadminok.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|solutionrelative:pruebaaspnetembocador\\assets\\css\\loginadminok.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|c:\\users\\pablo\\desktop\\app-embocador-main (1)\\app-embocador-main\\pruebaaspnetembocador\\controllers\\inicioadminscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|solutionrelative:pruebaaspnetembocador\\controllers\\inicioadminscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|c:\\users\\pablo\\desktop\\app-embocador-main (1)\\app-embocador-main\\pruebaaspnetembocador\\views\\inicioadmins\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|solutionrelative:pruebaaspnetembocador\\views\\inicioadmins\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|c:\\users\\pablo\\desktop\\app-embocador-main (1)\\app-embocador-main\\pruebaaspnetembocador\\views\\inicioadmins\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|solutionrelative:pruebaaspnetembocador\\views\\inicioadmins\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\pruebaaspnetembocador\\controllers\\iniciotrabajadorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|solutionrelative:pruebaaspnetembocador\\controllers\\iniciotrabajadorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,60 +21,53 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 403,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 410,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "InicioAdminsController.cs",
-              "DocumentMoniker": "C:\\Users\\pablo\\Desktop\\App-Embocador-main (1)\\App-Embocador-main\\PruebaASPNETEmbocador\\Controllers\\InicioAdminsController.cs",
-              "RelativeDocumentMoniker": "PruebaASPNETEmbocador\\Controllers\\InicioAdminsController.cs",
-              "ToolTip": "C:\\Users\\pablo\\Desktop\\App-Embocador-main (1)\\App-Embocador-main\\PruebaASPNETEmbocador\\Controllers\\InicioAdminsController.cs",
-              "RelativeToolTip": "PruebaASPNETEmbocador\\Controllers\\InicioAdminsController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAzwBwAAABhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T18:58:41.268Z",
-              "EditorCaption": ""
+              "Title": "loginAdminOk.css",
+              "DocumentMoniker": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\PruebaASPNETEmbocador\\Assets\\css\\loginAdminOk.css",
+              "RelativeDocumentMoniker": "PruebaASPNETEmbocador\\Assets\\css\\loginAdminOk.css",
+              "ToolTip": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\PruebaASPNETEmbocador\\Assets\\css\\loginAdminOk.css",
+              "RelativeToolTip": "PruebaASPNETEmbocador\\Assets\\css\\loginAdminOk.css",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-25T20:44:12.676Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "loginAdminOk.css",
-              "DocumentMoniker": "C:\\Users\\pablo\\Desktop\\App-Embocador-main (1)\\App-Embocador-main\\PruebaASPNETEmbocador\\Assets\\css\\loginAdminOk.css",
-              "RelativeDocumentMoniker": "PruebaASPNETEmbocador\\Assets\\css\\loginAdminOk.css",
-              "ToolTip": "C:\\Users\\pablo\\Desktop\\App-Embocador-main (1)\\App-Embocador-main\\PruebaASPNETEmbocador\\Assets\\css\\loginAdminOk.css",
-              "RelativeToolTip": "PruebaASPNETEmbocador\\Assets\\css\\loginAdminOk.css",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-18T18:46:03.132Z",
+              "Title": "LoginTrabajadores.cshtml",
+              "DocumentMoniker": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\PruebaASPNETEmbocador\\Views\\InicioTrabajadores\\LoginTrabajadores.cshtml",
+              "RelativeDocumentMoniker": "PruebaASPNETEmbocador\\Views\\InicioTrabajadores\\LoginTrabajadores.cshtml",
+              "ToolTip": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\PruebaASPNETEmbocador\\Views\\InicioTrabajadores\\LoginTrabajadores.cshtml",
+              "RelativeToolTip": "PruebaASPNETEmbocador\\Views\\InicioTrabajadores\\LoginTrabajadores.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAACGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-25T20:43:33.896Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\pablo\\Desktop\\App-Embocador-main (1)\\App-Embocador-main\\PruebaASPNETEmbocador\\Views\\InicioAdmins\\Index.cshtml",
-              "RelativeDocumentMoniker": "PruebaASPNETEmbocador\\Views\\InicioAdmins\\Index.cshtml",
-              "ToolTip": "C:\\Users\\pablo\\Desktop\\App-Embocador-main (1)\\App-Embocador-main\\PruebaASPNETEmbocador\\Views\\InicioAdmins\\Index.cshtml",
-              "RelativeToolTip": "PruebaASPNETEmbocador\\Views\\InicioAdmins\\Index.cshtml",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-18T18:45:36.993Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\pablo\\Desktop\\App-Embocador-main (1)\\App-Embocador-main\\PruebaASPNETEmbocador\\Views\\InicioAdmins\\Login.cshtml",
-              "RelativeDocumentMoniker": "PruebaASPNETEmbocador\\Views\\InicioAdmins\\Login.cshtml",
-              "ToolTip": "C:\\Users\\pablo\\Desktop\\App-Embocador-main (1)\\App-Embocador-main\\PruebaASPNETEmbocador\\Views\\InicioAdmins\\Login.cshtml",
-              "RelativeToolTip": "PruebaASPNETEmbocador\\Views\\InicioAdmins\\Login.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-18T18:45:44.84Z",
-              "EditorCaption": ""
+              "Title": "InicioTrabajadoresController.cs",
+              "DocumentMoniker": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\PruebaASPNETEmbocador\\Controllers\\InicioTrabajadoresController.cs",
+              "RelativeDocumentMoniker": "PruebaASPNETEmbocador\\Controllers\\InicioTrabajadoresController.cs",
+              "ToolTip": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\PruebaASPNETEmbocador\\Controllers\\InicioTrabajadoresController.cs",
+              "RelativeToolTip": "PruebaASPNETEmbocador\\Controllers\\InicioTrabajadoresController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAA5wCYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T20:38:47.412Z"
             }
           ]
         }
