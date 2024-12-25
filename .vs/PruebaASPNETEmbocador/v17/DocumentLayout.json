@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|c:\\users\\pablo\\documents\\github\\app-embocador\\pruebaaspnetembocador\\controllers\\ficharturnoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|solutionrelative:pruebaaspnetembocador\\controllers\\ficharturnoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|c:\\users\\pablo\\documents\\github\\app-embocador\\pruebaaspnetembocador\\views\\iniciotrabajadores\\logintrabajadores.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|solutionrelative:pruebaaspnetembocador\\views\\iniciotrabajadores\\logintrabajadores.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -22,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 410,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,7 +38,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "FicharTurnosController.cs",
+              "DocumentMoniker": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\PruebaASPNETEmbocador\\Controllers\\FicharTurnosController.cs",
+              "RelativeDocumentMoniker": "PruebaASPNETEmbocador\\Controllers\\FicharTurnosController.cs",
+              "ToolTip": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\PruebaASPNETEmbocador\\Controllers\\FicharTurnosController.cs",
+              "RelativeToolTip": "PruebaASPNETEmbocador\\Controllers\\FicharTurnosController.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T21:00:42.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "loginAdminOk.css",
               "DocumentMoniker": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\PruebaASPNETEmbocador\\Assets\\css\\loginAdminOk.css",
               "RelativeDocumentMoniker": "PruebaASPNETEmbocador\\Assets\\css\\loginAdminOk.css",
@@ -46,20 +63,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "LoginTrabajadores.cshtml",
               "DocumentMoniker": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\PruebaASPNETEmbocador\\Views\\InicioTrabajadores\\LoginTrabajadores.cshtml",
               "RelativeDocumentMoniker": "PruebaASPNETEmbocador\\Views\\InicioTrabajadores\\LoginTrabajadores.cshtml",
               "ToolTip": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\PruebaASPNETEmbocador\\Views\\InicioTrabajadores\\LoginTrabajadores.cshtml",
               "RelativeToolTip": "PruebaASPNETEmbocador\\Views\\InicioTrabajadores\\LoginTrabajadores.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAACGAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-12-25T20:43:33.896Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "InicioTrabajadoresController.cs",
               "DocumentMoniker": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\PruebaASPNETEmbocador\\Controllers\\InicioTrabajadoresController.cs",
               "RelativeDocumentMoniker": "PruebaASPNETEmbocador\\Controllers\\InicioTrabajadoresController.cs",
