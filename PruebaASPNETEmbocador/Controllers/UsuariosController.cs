@@ -108,17 +108,22 @@ namespace PruebaASPNETEmbocador.Controllers
 
                 db.Entry(usuarioExistente).State = EntityState.Modified;
                 db.SaveChanges();
+
+                // Actualizar la información del usuario en la sesión
+                Session["NombreUsuario"] = usuarioExistente.Nombre;
+
                 if (Session["IsAdmin"] != null && (bool)Session["IsAdmin"])
                 {
                     return RedirectToAction("PanelAdmin", "InicioAdmins");
                 }
                 else
                 {
-                    return RedirectToAction("PanelTrabajador", "InicioTrabajadores");
+                    return RedirectToAction("PanelTrabajador", "InicioTrabajadores", new { id = usuarioExistente.IDUsuario });
                 }
             }
             return View(usuarios);
         }
+
 
         // GET: Usuarios/Delete/5
         public ActionResult Delete(int? id)

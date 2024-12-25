@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using PruebaASPNETEmbocador.Filters;
 using PruebaASPNETEmbocador.Models;
@@ -10,7 +8,6 @@ namespace PruebaASPNETEmbocador.Controllers
 {
     public class InicioTrabajadoresController : Controller
     {
-
         private static EmbocadorEntities1 db = new EmbocadorEntities1();
 
         // GET: InicioTrabajadores
@@ -18,11 +15,10 @@ namespace PruebaASPNETEmbocador.Controllers
         {
             return View();
         }
-    
-    // Método para validar los datos de un trabajador e iniciar sesión en el sistema
-    [HttpPost]
 
-    public ActionResult LoginTrabajadores(Usuarios IDUsuario)
+        // Método para validar los datos de un trabajador e iniciar sesión en el sistema
+        [HttpPost]
+        public ActionResult LoginTrabajadores(Usuarios IDUsuario)
         {
             // Verificar si existe el nombre de usuario
             var usuarioExistente = db.Usuarios.FirstOrDefault(x => x.Nombre == IDUsuario.Nombre);
@@ -38,6 +34,14 @@ namespace PruebaASPNETEmbocador.Controllers
                     Session["IsAdmin"] = usuarioExistente.IsAdmin;
 
                     ViewBag.NombreUsuario = usuarioExistente.Nombre;
+
+                    // Verificar si hay un mensaje en TempData y pasarlo a ViewBag
+                    if (TempData["Mensaje"] != null)
+                    {
+                        ViewBag.Mensaje = TempData["Mensaje"];
+                        ViewBag.HoraFecha = TempData["HoraFecha"];
+                    }
+
                     return View(usuarioExistente);
                 }
                 else
@@ -51,7 +55,6 @@ namespace PruebaASPNETEmbocador.Controllers
             }
         }
 
-
         // Método que permite volver al dashboard del usuario administrador
         [SessionCheck]
         public ActionResult PanelTrabajador()
@@ -62,16 +65,13 @@ namespace PruebaASPNETEmbocador.Controllers
             return View("LoginTrabajadores", usuarioExistente);
         }
 
-
-
         // Método para cerrar sesión
         [HttpPost]
-     public ActionResult Logout()
-     {
-     // Limpiar la sesión
-     Session.Clear();
-     return RedirectToAction("Index" , "Home");
+        public ActionResult Logout()
+        {
+            // Limpiar la sesión
+            Session.Clear();
+            return RedirectToAction("Index", "Home");
         }
-
     }
 }

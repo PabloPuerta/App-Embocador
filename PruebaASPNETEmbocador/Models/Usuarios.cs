@@ -14,9 +14,9 @@ namespace PruebaASPNETEmbocador.Models
 
 using System;
     using System.Collections.Generic;
-    
-public partial class Usuarios
-{
+    using System.ComponentModel.DataAnnotations;
+    public partial class Usuarios
+    {
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
     public Usuarios()
@@ -26,18 +26,19 @@ public partial class Usuarios
 
     }
 
+        public int IDUsuario { get; set; }
 
-    public int IDUsuario { get; set; }
+        [Required(ErrorMessage = "El nombre es obligatorio.")]
+        public string Nombre { get; set; }
 
-    public string Nombre { get; set; }
+        [Required(ErrorMessage = "La contraseña es obligatoria.")]
+        public string Contraseña { get; set; }
 
-    public string Contraseña { get; set; }
-
-    public bool IsAdmin { get; set; }
-
+        public bool IsAdmin { get; set; }
 
 
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
 
     public virtual ICollection<TurnosTrabajadoresEmbocador> TurnosTrabajadoresEmbocador { get; set; }
 
