@@ -7,6 +7,11 @@
       <End Role="Usuarios" EntitySet="Usuarios" />
       <End Role="TurnosTrabajadoresEmbocador" EntitySet="TurnosTrabajadoresEmbocador" />
     </AssociationSet>
+    <EntitySet Name="TurnosHorarios" EntityType="EmbocadorModel.TurnosHorarios" />
+    <AssociationSet Name="FK_TurnosHorarios_Usuarios" Association="EmbocadorModel.FK_TurnosHorarios_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="TurnosHorarios" EntitySet="TurnosHorarios" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="TurnosTrabajadoresEmbocador">
     <Key>
@@ -27,6 +32,7 @@
     <Property Name="Contraseña" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="IsAdmin" Type="Boolean" Nullable="false" />
     <NavigationProperty Name="TurnosTrabajadoresEmbocador" Relationship="EmbocadorModel.FK_TurnosTrabajadoresEmbocador_Usuarios" FromRole="Usuarios" ToRole="TurnosTrabajadoresEmbocador" />
+    <NavigationProperty Name="TurnosHorarios" Relationship="EmbocadorModel.FK_TurnosHorarios_Usuarios" FromRole="Usuarios" ToRole="TurnosHorarios" />
   </EntityType>
   <Association Name="FK_TurnosTrabajadoresEmbocador_Usuarios">
     <End Type="EmbocadorModel.Usuarios" Role="Usuarios" Multiplicity="0..1">
@@ -38,6 +44,31 @@
         <PropertyRef Name="IDUsuario" />
       </Principal>
       <Dependent Role="TurnosTrabajadoresEmbocador">
+        <PropertyRef Name="IDUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TurnosHorarios">
+    <Key>
+      <PropertyRef Name="IDTurnoHorario" />
+    </Key>
+    <Property Name="IDTurnoHorario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDUsuario" Type="Int32" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="HoraInicio" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="HoraFin" Type="Time" Nullable="false" Precision="7" />
+    <NavigationProperty Name="Usuarios" Relationship="EmbocadorModel.FK_TurnosHorarios_Usuarios" FromRole="TurnosHorarios" ToRole="Usuarios" />
+  </EntityType>
+  <Association Name="FK_TurnosHorarios_Usuarios">
+    <End Type="EmbocadorModel.Usuarios" Role="Usuarios" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="EmbocadorModel.TurnosHorarios" Role="TurnosHorarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="IDUsuario" />
+      </Principal>
+      <Dependent Role="TurnosHorarios">
         <PropertyRef Name="IDUsuario" />
       </Dependent>
     </ReferentialConstraint>

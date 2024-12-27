@@ -1,24 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|c:\\users\\pablo\\documents\\github\\app-embocador\\pruebaaspnetembocador\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|solutionrelative:pruebaaspnetembocador\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|c:\\users\\pablo\\documents\\github\\app-embocador\\pruebaaspnetembocador\\controllers\\iniciotrabajadorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|solutionrelative:pruebaaspnetembocador\\controllers\\iniciotrabajadorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\pruebaaspnetembocador\\views\\usuarios\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|solutionrelative:pruebaaspnetembocador\\views\\usuarios\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|c:\\users\\pablo\\documents\\github\\app-embocador\\pruebaaspnetembocador\\models\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|solutionrelative:pruebaaspnetembocador\\models\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -26,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 410,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -35,58 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UsuariosController.cs",
-              "DocumentMoniker": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\PruebaASPNETEmbocador\\Controllers\\UsuariosController.cs",
-              "RelativeDocumentMoniker": "PruebaASPNETEmbocador\\Controllers\\UsuariosController.cs",
-              "ToolTip": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\PruebaASPNETEmbocador\\Controllers\\UsuariosController.cs",
-              "RelativeToolTip": "PruebaASPNETEmbocador\\Controllers\\UsuariosController.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAcwGYAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-25T21:54:07.199Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "InicioTrabajadoresController.cs",
-              "DocumentMoniker": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\PruebaASPNETEmbocador\\Controllers\\InicioTrabajadoresController.cs",
-              "RelativeDocumentMoniker": "PruebaASPNETEmbocador\\Controllers\\InicioTrabajadoresController.cs",
-              "ToolTip": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\PruebaASPNETEmbocador\\Controllers\\InicioTrabajadoresController.cs",
-              "RelativeToolTip": "PruebaASPNETEmbocador\\Controllers\\InicioTrabajadoresController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwC4AAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-25T21:53:04.985Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Usuarios.cs",
-              "DocumentMoniker": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\PruebaASPNETEmbocador\\Models\\Usuarios.cs",
-              "RelativeDocumentMoniker": "PruebaASPNETEmbocador\\Models\\Usuarios.cs",
-              "ToolTip": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\PruebaASPNETEmbocador\\Models\\Usuarios.cs",
-              "RelativeToolTip": "PruebaASPNETEmbocador\\Models\\Usuarios.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAcwBUAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-25T21:35:51.321Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\PruebaASPNETEmbocador\\Views\\Usuarios\\Edit.cshtml",
-              "RelativeDocumentMoniker": "PruebaASPNETEmbocador\\Views\\Usuarios\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\PruebaASPNETEmbocador\\Views\\Usuarios\\Edit.cshtml",
-              "RelativeToolTip": "PruebaASPNETEmbocador\\Views\\Usuarios\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-25T21:09:07.741Z",
-              "EditorCaption": ""
             }
           ]
         }

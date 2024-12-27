@@ -48,8 +48,8 @@
                     @Html.DisplayFor(modelItem => item.IsAdmin)
                 </td>
                 <td>
-                    @Html.ActionLink("Editar usuario", "Edit", new { id = item.IDUsuario }) 
-                    @Html.ActionLink("Detalles del usuario", "Details", new { id = item.IDUsuario }) 
+                    @Html.ActionLink("Editar", "Edit", new { id = item.IDUsuario, loginPanel = "admin" }) |
+                    @Html.ActionLink("Detalles del usuario", "Details", new { id = item.IDUsuario })
                     @Html.ActionLink("Eliminar usuario", "Delete", new { id = item.IDUsuario })
                 </td>
             </tr>
@@ -60,6 +60,6 @@
 
 <div style="text-align: center; margin-top: 50px;">
     <button class="btnNewUser" onclick="location.href='@Url.Action("PanelAdmin", "InicioAdmins")'">
-        <p>Volver al panel de administrador</p>
+        <p>Volver atrás</p>
     </button>
 </div>

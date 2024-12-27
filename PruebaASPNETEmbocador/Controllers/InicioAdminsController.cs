@@ -24,9 +24,8 @@ namespace PruebaASPNETEmbocador.Controllers
 
         // Método para validar el Login de un administrador en el sistema
         [HttpPost]
-        public ActionResult CheckLogin(Usuarios IDUsuario)
+        public ActionResult CheckLogin(Usuarios IDUsuario, string loginPanel)
         {
-
             // Verificar si existe el nombre de usuario
             var usuarioExistente = db.Usuarios.FirstOrDefault(x => x.Nombre == IDUsuario.Nombre);
 
@@ -41,23 +40,27 @@ namespace PruebaASPNETEmbocador.Controllers
                         Session["IdUsuario"] = usuarioExistente.IDUsuario;
                         Session["NombreUsuario"] = usuarioExistente.Nombre;
                         Session["IsAdmin"] = usuarioExistente.IsAdmin;
+                        Session["LoginPanel"] = "admin"; // Almacenar el panel desde el que se ha logueado
 
                         ViewBag.NombreUsuario = usuarioExistente.Nombre;
                         return View("PanelAdmin", usuarioExistente);
                     }
                     else
                     {
-                        return Json(new { succes = false, message = "El usuario no está dado de alta como administrador en el sistema." }, JsonRequestBehavior.AllowGet);
+                        TempData["ErrorMessage"] = "El usuario no está dado de alta como administrador en el sistema.";
+                        return RedirectToAction("Index");
                     }
                 }
                 else
                 {
-                    return Json(new { succes = false, message = "Contraseña incorrecta" }, JsonRequestBehavior.AllowGet);
+                    TempData["ErrorMessage"] = "Contraseña incorrecta";
+                    return RedirectToAction("Index");
                 }
             }
             else
             {
-                return Json(new { succes = false, message = "No existe ningún usuario con el nombre especificado o el nombre de usuario introducido no es correcto." }, JsonRequestBehavior.AllowGet);
+                TempData["ErrorMessage"] = "No existe ningún usuario con el nombre especificado o el nombre de usuario introducido no es correcto.";
+                return RedirectToAction("Index");
             }
         }
 
@@ -68,9 +71,23 @@ namespace PruebaASPNETEmbocador.Controllers
         {
             ViewBag.NombreUsuario = Session["NombreUsuario"];
             string nombreUsuario = Session["NombreUsuario"] as string;
+
+            if (string.IsNullOrEmpty(nombreUsuario))
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
             var usuarioExistente = db.Usuarios.FirstOrDefault(x => x.Nombre == nombreUsuario);
+
+            if (usuarioExistente == null)
+            { 
+                return RedirectToAction("Index", "Home");
+            }
+
             return View("PanelAdmin", usuarioExistente);
         }
+
+
 
         // Método para cerrar sesión
         [HttpPost]

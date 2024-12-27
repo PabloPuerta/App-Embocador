@@ -358,3 +358,6 @@ C:\Users\pablo\Documents\GitHub\App-Embocador\PruebaASPNETEmbocador\obj\Debug\Pr
 C:\Users\pablo\Documents\GitHub\App-Embocador\PruebaASPNETEmbocador\obj\Debug\PruebaAS.FB9DE095.Up2Date
 C:\Users\pablo\Documents\GitHub\App-Embocador\PruebaASPNETEmbocador\obj\Debug\PruebaASPNETEmbocador.dll
 C:\Users\pablo\Documents\GitHub\App-Embocador\PruebaASPNETEmbocador\obj\Debug\PruebaASPNETEmbocador.pdb
+C:\Users\pablo\Documents\GitHub\App-Embocador\PruebaASPNETEmbocador\bin\BouncyCastle.Crypto.dll
+C:\Users\pablo\Documents\GitHub\App-Embocador\PruebaASPNETEmbocador\bin\itextsharp.dll
+C:\Users\pablo\Documents\GitHub\App-Embocador\PruebaASPNETEmbocador\bin\itextsharp.xml

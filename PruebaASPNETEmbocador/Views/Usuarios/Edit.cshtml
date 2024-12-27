@@ -3,6 +3,8 @@
 @{
     ViewBag.Title = "Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    bool isAdmin = Session["IsAdmin"] != null && (bool)Session["IsAdmin"];
+    string loginPanel = ViewBag.LoginPanel as string;
 }
 
 <link rel="stylesheet" type="text/css" href="~/Assets/css/edit.css">
@@ -20,9 +22,10 @@
         </div>
     }
 
-    @using (Html.BeginForm())
+    @using (Html.BeginForm("Edit", "Usuarios", FormMethod.Post, new { id = "editForm" }))
     {
         @Html.AntiForgeryToken()
+        @Html.Hidden("loginPanel", loginPanel) <!-- Pasar la variable loginPanel al método POST -->
 
         <div class="form-horizontal" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
             <hr />
@@ -45,23 +48,46 @@
                 </div>
             </div>
 
-            <div class="form-group">
-                <p class="formSpaces">¿El usuario es administrador?</p>
-                <div class="col-md-10" style="max-width: 100%">
-                    <div class="checkbox">
-                        @Html.EditorFor(model => model.IsAdmin)
-                        @Html.ValidationMessageFor(model => model.IsAdmin, "", new { @class = "text-danger" })
+            @if (isAdmin)
+            {
+                <div class="form-group">
+                    <p class="formSpaces">¿El usuario es administrador?</p>
+                    <div class="col-md-10" style="max-width: 100%">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.IsAdmin)
+                            @Html.ValidationMessageFor(model => model.IsAdmin, "", new { @class = "text-danger" })
+                        </div>
                     </div>
                 </div>
-            </div>
+            }
 
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Guardar cambios" class="btnSave" />
+                    <input type="submit" value="Guardar cambios" class="btnSave" onclick="return showAlert();" />
                 </div>
-                <button class="btnSave" onclick="location.href='@Url.Action(Session["IsAdmin"] != null && (bool)Session["IsAdmin"] ? "PanelAdmin" : "PanelTrabajador", (bool)Session["IsAdmin"] ? "InicioAdmins" : "InicioTrabajadores")'">Volver atrás</button>
+
+                <div style="text-align: center; margin-top: 50px;">
+                    @if (isAdmin && loginPanel == "admin")
+                    {
+                        <button type="button" class="btnNewUser" onclick="location.href='@Url.Action("PanelAdmin", "InicioAdmins")'">
+                            <p>Volver atrás</p>
+                        </button>
+                    }
+                    else
+                    {
+                        <button type="button" class="btnNewUser" onclick="location.href='@Url.Action("PanelTrabajador", "InicioTrabajadores")'">
+                            <p>Volver atrás</p>
+                        </button>
+                    }
+                </div>
             </div>
         </div>
     }
 </div>
 
+<script type="text/javascript">
+    function showAlert() {
+        alert('Usuario actualizado correctamente. Por favor, vuelva a iniciar sesión.');
+        return true;
+    }
+</script>

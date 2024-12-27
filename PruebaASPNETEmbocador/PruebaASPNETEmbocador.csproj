@@ -47,11 +47,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
@@ -133,6 +139,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InicioAdminsController.cs" />
     <Compile Include="Controllers\InicioTrabajadoresController.cs" />
+    <Compile Include="Controllers\TurnosHorariosController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Filters\SessionCheckAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -153,6 +160,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\TurnosHorarios.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\TurnosTrabajadoresEmbocador.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -166,6 +176,7 @@
     <Content Include="Assets\css\loginAdminOk.css" />
     <Content Include="Assets\css\administrarUsuarios.css" />
     <Content Include="Assets\css\edit.css" />
+    <Content Include="Assets\css\turnosHorarios.css" />
     <Content Include="Assets\css\util.css" />
     <Content Include="Assets\fonts\font-awesome-4.7.0\css\font-awesome.css" />
     <Content Include="Assets\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
@@ -335,9 +346,8 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_ErrorMessage.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\InicioAdmins\Index.cshtml" />
@@ -350,6 +360,9 @@
     <Content Include="Views\Usuarios\Index.cshtml" />
     <Content Include="Views\InicioTrabajadores\LoginTrabajadores.cshtml" />
     <Content Include="Views\FicharTurnos\Confirmacion.cshtml" />
+    <Content Include="Views\TurnosHorarios\Index.cshtml" />
+    <Content Include="Views\TurnosHorarios\Create.cshtml" />
+    <Content Include="Views\TurnosHorarios\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

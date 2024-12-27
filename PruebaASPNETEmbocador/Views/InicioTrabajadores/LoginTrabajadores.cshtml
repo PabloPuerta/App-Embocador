@@ -10,8 +10,6 @@
 <div class="limiter">
     <div class="contenedorIdUsuario">
 
-        <p>Ha iniciado sesión como: @ViewBag.NombreUsuario</p>
-        <br />
         <h3>Panel de usuario</h3>
         <br />
 
@@ -27,20 +25,23 @@
             <nav class="barraNavAdmin">
                 @using (Html.BeginForm("RegistrarEntrada", "FicharTurnos", FormMethod.Post))
                 {
+                    @Html.Hidden("loginPanel", "trabajador") <!-- Campo oculto para loginPanel -->
                     <button type="submit" class="navLink" style="font-weight: bolder;">Registrar entrada</button>
                 }
                 @using (Html.BeginForm("RegistrarSalida", "FicharTurnos", FormMethod.Post))
                 {
+                    @Html.Hidden("loginPanel", "trabajador") <!-- Campo oculto para loginPanel -->
                     <button type="submit" class="navLink" style="font-weight: bolder;">Registrar salida</button>
                 }
-                @Html.ActionLink("Consultar mis turnos y horarios", "Index", "InicioAdmins", new { area = "" }, new { @class = "navLink" })
-                @Html.ActionLink("Gestionar mi usuario", "Edit", "Usuarios", new { id = Model.IDUsuario }, new { @class = "navLink" })
+                @Html.ActionLink("Consultar turnos y horarios", "Index", "TurnosHorarios", new { area = "", loginPanel = "trabajador" }, new { @class = "navLink" })
+                @Html.ActionLink("Gestionar mi usuario", "Edit", "Usuarios", new { id = Model.IDUsuario, loginPanel = "trabajador" }, new { @class = "navLink" })
             </nav>
 
         </div>
         <div style="margin-top: 50px; margin-bottom: 50px;">
             @using (Html.BeginForm("Logout", "InicioAdmins", FormMethod.Post))
             {
+                @Html.Hidden("loginPanel", "trabajador") <!-- Campo oculto para loginPanel -->
                 <button type="submit" class="btnCerrarSesion">Cerrar sesión</button>
             }
         </div>

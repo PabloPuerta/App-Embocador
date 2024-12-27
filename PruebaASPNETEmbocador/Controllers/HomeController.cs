@@ -1,15 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Linq;
 using System.Web.Mvc;
+using PruebaASPNETEmbocador.Models;
 
 namespace PruebaASPNETEmbocador.Controllers
 {
     public class HomeController : Controller
     {
+     
         public ActionResult Index()
         {
+      
             return View();
         }
 
@@ -20,8 +20,8 @@ namespace PruebaASPNETEmbocador.Controllers
 
         public ActionResult Contact()
         {
-      
             return View();
         }
     }
 }
+

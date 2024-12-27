@@ -32,38 +32,49 @@ namespace PruebaASPNETEmbocador.Controllers
                     Session["IdUsuario"] = usuarioExistente.IDUsuario;
                     Session["NombreUsuario"] = usuarioExistente.Nombre;
                     Session["IsAdmin"] = usuarioExistente.IsAdmin;
+                    Session["LoginPanel"] = "trabajador"; // Almacenar el panel desde el que se ha logueado
 
                     ViewBag.NombreUsuario = usuarioExistente.Nombre;
 
-                    // Verificar si hay un mensaje en TempData y pasarlo a ViewBag
-                    if (TempData["Mensaje"] != null)
-                    {
-                        ViewBag.Mensaje = TempData["Mensaje"];
-                        ViewBag.HoraFecha = TempData["HoraFecha"];
-                    }
-
-                    return View(usuarioExistente);
+                    return View("LoginTrabajadores", usuarioExistente);
                 }
                 else
                 {
-                    return Json(new { succes = false, message = "Contraseña incorrecta" }, JsonRequestBehavior.AllowGet);
+                    TempData["ErrorMessage"] = "Contraseña incorrecta";
+                    return RedirectToAction("Index", "Home");
                 }
             }
             else
             {
-                return Json(new { succes = false, message = "No existe ningún usuario con el nombre especificado o el nombre de usuario introducido no es correcto." }, JsonRequestBehavior.AllowGet);
+                TempData["ErrorMessage"] = "No existe ningún usuario con el nombre especificado o el nombre de usuario introducido no es correcto.";
+                return RedirectToAction("Index", "Home");
             }
         }
 
-        // Método que permite volver al dashboard del usuario administrador
+        // Método que permite volver al dashboard del usuario trabajador
         [SessionCheck]
         public ActionResult PanelTrabajador()
         {
-            ViewBag.NombreUsuario = Session["NombreUsuario"];
             string nombreUsuario = Session["NombreUsuario"] as string;
+
+            if (string.IsNullOrEmpty(nombreUsuario))
+            {
+             
+                return RedirectToAction("Index", "Home");
+            }
+
             var usuarioExistente = db.Usuarios.FirstOrDefault(x => x.Nombre == nombreUsuario);
+
+            if (usuarioExistente == null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
             return View("LoginTrabajadores", usuarioExistente);
         }
+
+
+
 
         // Método para cerrar sesión
         [HttpPost]

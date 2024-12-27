@@ -1,0 +1,100 @@
+﻿@model IEnumerable<PruebaASPNETEmbocador.Models.TurnosHorarios>
+
+@{
+    ViewBag.Title = "Turnos Horarios";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    bool isAdmin = Session["IsAdmin"] != null && (bool)Session["IsAdmin"];
+    string loginPanel = Session["LoginPanel"] as string;
+}
+
+<link rel="stylesheet" type="text/css" href="~/Assets/css/turnosHorarios.css">
+
+<div class="fondoTurnos">
+    <h2>Turnos y horarios</h2>
+
+    @if (isAdmin && loginPanel == "admin")
+    {
+        <p>
+            @Html.ActionLink("Crear Nuevo Turno", "Create")
+        </p>
+    }
+
+    @using (Html.BeginForm("Index", "TurnosHorarios", FormMethod.Get))
+    {
+        <div class="filtroFondo">
+            <p>
+                Nombre de Usuario: @Html.TextBox("searchString")
+                Fecha de Trabajo: @Html.TextBox("searchDate", "", new { type = "date" })
+                <input type="submit" value="Buscar" class="btn btn-default" />
+            </p>
+        </div>
+    }
+
+    <table class="table">
+        <tr>
+            <th>
+                Nombre del trabajador
+            </th>
+            <th>
+                Fecha de trabajo
+            </th>
+            <th>
+                Hora de inicio del turno
+            </th>
+            <th>
+                Hora de finalización del turno
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Usuarios.Nombre)
+                </td>
+                <td>
+                    @item.Fecha.ToString("dd/MM/yyyy")
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HoraInicio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HoraFin)
+                </td>
+                <td>
+                    @if (isAdmin && loginPanel == "admin")
+                    {
+                        <text>
+                            @Html.ActionLink("Editar", "Edit", new { id = item.IDTurnoHorario }) |
+                            @Html.ActionLink("Eliminar", "Delete", new { id = item.IDTurnoHorario })
+                        </text>
+                    }
+                </td>
+            </tr>
+        }
+
+    </table>
+
+    <div style="text-align: center; margin-top: 50px;">
+        @if (isAdmin && loginPanel == "admin")
+        {
+            <button class="btnNewUser" onclick="location.href='@Url.Action("PanelAdmin", "InicioAdmins")'">
+                <p>Volver atrás</p>
+            </button>
+        }
+        else
+        {
+            <button class="btnNewUser" onclick="location.href='@Url.Action("PanelTrabajador", "InicioTrabajadores")'">
+                <p>Volver atrás</p>
+            </button>
+        }
+    </div>
+
+    <div style="text-align: center; margin-top: 20px;">
+        <button class="btnNewUser" onclick="location.href='@Url.Action("ExportToPdf", "TurnosHorarios", new { searchString = Request["searchString"], searchDate = Request["searchDate"] })'">
+            <p>Exportar a PDF</p>
+        </button>
+    </div>
+</div>
+

@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 using PruebaASPNETEmbocador.Models;
 
@@ -49,8 +45,6 @@ namespace PruebaASPNETEmbocador.Controllers
         }
 
         // POST: Usuarios/Create
-        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
-        // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "IDUsuario,Nombre,Contraseña,IsAdmin")] Usuarios usuarios)
@@ -66,7 +60,7 @@ namespace PruebaASPNETEmbocador.Controllers
         }
 
         // GET: Usuarios/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(int? id, string loginPanel)
         {
             if (id == null)
             {
@@ -77,15 +71,13 @@ namespace PruebaASPNETEmbocador.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.LoginPanel = loginPanel; // Pasar la variable loginPanel a la vista
             return View(usuarioExistente);
         }
 
-        // POST: Usuarios/Edit/5
-        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
-        // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IDUsuario,Nombre,Contraseña,IsAdmin")] Usuarios usuarios)
+        public ActionResult Edit([Bind(Include = "IDUsuario,Nombre,Contraseña,IsAdmin")] Usuarios usuarios, string loginPanel)
         {
             if (ModelState.IsValid)
             {
@@ -95,35 +87,34 @@ namespace PruebaASPNETEmbocador.Controllers
                     return HttpNotFound();
                 }
 
-                if (!(bool)Session["IsAdmin"] && usuarioExistente.IsAdmin != usuarios.IsAdmin)
+                // Mantener el valor original de IsAdmin si no se ha modificado manualmente
+                if (usuarioExistente.IsAdmin != usuarios.IsAdmin && !(bool)Session["IsAdmin"])
                 {
-                    // Si el usuario no es administrador y ha intentado modificar la casilla IsAdmin, mostrar un mensaje de error
-                    ViewBag.ErrorMessage = "Tu usuario no tiene privilegios de administrador, no puede modificar los permisos de los usuarios. Contacte con un administrador si necesita ayuda";
-                    return View(usuarioExistente);
+                    usuarios.IsAdmin = usuarioExistente.IsAdmin;
                 }
 
                 usuarioExistente.Nombre = usuarios.Nombre;
                 usuarioExistente.Contraseña = usuarios.Contraseña;
-                usuarioExistente.IsAdmin = usuarios.IsAdmin;
+
+                // Solo actualizar IsAdmin si el usuario es administrador
+                if ((bool)Session["IsAdmin"])
+                {
+                    usuarioExistente.IsAdmin = usuarios.IsAdmin;
+                }
 
                 db.Entry(usuarioExistente).State = EntityState.Modified;
                 db.SaveChanges();
 
-                // Actualizar la información del usuario en la sesión
-                Session["NombreUsuario"] = usuarioExistente.Nombre;
+               
+                // Cerrar la sesión
+                Session.Clear();
 
-                if (Session["IsAdmin"] != null && (bool)Session["IsAdmin"])
-                {
-                    return RedirectToAction("PanelAdmin", "InicioAdmins");
-                }
-                else
-                {
-                    return RedirectToAction("PanelTrabajador", "InicioTrabajadores", new { id = usuarioExistente.IDUsuario });
-                }
+                // Redirigir a la página de inicio de sesión
+                return RedirectToAction("Index", "Home");
             }
+            ViewBag.LoginPanel = loginPanel; // Pasar la variable loginPanel a la vista
             return View(usuarios);
         }
-
 
         // GET: Usuarios/Delete/5
         public ActionResult Delete(int? id)
@@ -161,5 +152,3 @@ namespace PruebaASPNETEmbocador.Controllers
         }
     }
 }
-
-

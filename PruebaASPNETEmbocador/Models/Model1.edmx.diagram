@@ -8,6 +8,8 @@
         <EntityTypeShape EntityType="EmbocadorModel.TurnosTrabajadoresEmbocador" Width="1.5" PointX="3" PointY="0.875" />
         <EntityTypeShape EntityType="EmbocadorModel.Usuarios" Width="1.5" PointX="0.75" PointY="0.875" />
         <AssociationConnector Association="EmbocadorModel.FK_TurnosTrabajadoresEmbocador_Usuarios" />
+        <EntityTypeShape EntityType="EmbocadorModel.TurnosHorarios" Width="1.5" PointX="3" PointY="3.875" />
+        <AssociationConnector Association="EmbocadorModel.FK_TurnosHorarios_Usuarios" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -36,6 +36,8 @@ public partial class EmbocadorEntities1 : DbContext
 
     public virtual DbSet<Usuarios> Usuarios { get; set; }
 
+    public virtual DbSet<TurnosHorarios> TurnosHorarios { get; set; }
+
 }
 
 }
