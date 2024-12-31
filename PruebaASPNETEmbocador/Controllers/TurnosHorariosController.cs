@@ -18,21 +18,38 @@ namespace PruebaASPNETEmbocador.Controllers
         private EmbocadorEntities1 db = new EmbocadorEntities1();
 
         // GET: TurnosHorarios
-        public ActionResult Index(string searchString, DateTime? searchDate)
+        public ActionResult Index(string searchString, DateTime? searchDate, int page = 1, int pageSize = 31)
         {
-            var turnosHorarios = db.TurnosHorarios.Include(t => t.Usuarios);
+            var turnos = from t in db.TurnosHorarios
+                         select t;
 
-            if (!String.IsNullOrEmpty(searchString))
+            if (!string.IsNullOrEmpty(searchString))
             {
-                turnosHorarios = turnosHorarios.Where(t => t.Usuarios.Nombre.Contains(searchString));
+                turnos = turnos.Where(t => t.Usuarios.Nombre.Contains(searchString));
             }
 
             if (searchDate.HasValue)
             {
-                turnosHorarios = turnosHorarios.Where(t => DbFunctions.TruncateTime(t.Fecha) == DbFunctions.TruncateTime(searchDate.Value));
+                if (DateTime.TryParse(searchDate.ToString(), out DateTime date))
+                {
+                    turnos = turnos.Where(t => t.Fecha == date);
+                }
             }
 
-            return View(turnosHorarios.ToList());
+            var totalRecords = turnos.Count();
+            var totalPages = (int)Math.Ceiling((double)totalRecords / pageSize);
+
+            var turnosPaged = turnos.OrderBy(t => t.Fecha)
+                                    .Skip((page - 1) * pageSize)
+                                    .Take(pageSize)
+                                    .ToList();
+
+            ViewBag.CurrentPage = page;
+            ViewBag.TotalPages = totalPages;
+            ViewBag.SearchString = searchString;
+            ViewBag.SearchDate = searchDate;
+
+            return View(turnosPaged);
         }
 
         // GET: TurnosHorarios/Create

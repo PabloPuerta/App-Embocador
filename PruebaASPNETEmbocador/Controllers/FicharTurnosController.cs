@@ -51,7 +51,7 @@ namespace PruebaASPNETEmbocador.Controllers
                 db.SaveChanges();
 
                 // Almacenar el mensaje de confirmación en TempData
-                TempData["Mensaje"] = "Entrada registrada correctamente.";
+                TempData["Mensaje"] = "Entrada registrada correctamente. <br>";
                 TempData["HoraFecha"] = turno.RegistroEntrada.ToString();
             }
             return RedirectToAction("PanelTrabajador", "InicioTrabajadores");

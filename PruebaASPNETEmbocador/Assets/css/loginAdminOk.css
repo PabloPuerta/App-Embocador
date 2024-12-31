@@ -73,3 +73,14 @@
         color: black;
         font-weight: bolder;
     }
+
+.btn-primary {
+    background-color: #003366; /* Cambia este color al color primario de tu proyecto */
+    border-color: white; /* Cambia este color al color primario de tu proyecto */
+    color: white; /* Color del texto */
+}
+
+    .btn-primary:hover {
+        background-color: #4CAF50; /* Cambia este color al color de hover de tu proyecto */
+        border-color: black; /* Cambia este color al color de hover de tu proyecto */
+    }

@@ -5,49 +5,60 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2 style="text-align: center; padding-top: 25px;">Dar de alta un nuevo usuario</h2>
+<link rel="stylesheet" type="text/css" href="~/Assets/css/detalles.css">
 
-@using (Html.BeginForm()) 
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+<div class="fondoEdit">
+    <div class="cabeceraEdit">
+        <h2 style="text-align: center; padding-top: 25px;">Dar de alta un nuevo usuario</h2>
+    </div>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal formulario-centrado" style="margin-top: 50px;">
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group" style="text-align: center">
+                Nombre de usuario
+                <div style="margin-top: 20px;">
+                    @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+                </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Contraseña, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.PasswordFor(model => model.Contraseña, new { htmlAttributes = new { @class = "form-control" } })
+            <div class="form-group" style="margin-top: 20px;">
+                Contraseña para el usuario
+                <div style="text-align: center">
+                    @Html.PasswordFor(model => model.Contraseña, new { htmlAttributes = new { @class = "form-control" } })
+
+                </div>
                 @Html.ValidationMessageFor(model => model.Contraseña, "", new { @class = "text-danger" })
             </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.IsAdmin, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.IsAdmin)
-                    @Html.ValidationMessageFor(model => model.IsAdmin, "", new { @class = "text-danger" })
+            <div class="form-group" style="margin-top: 20px;">
+               ¿El usuario es administrador?
+                <div style="text-align: center">
+                    <div class="checkbox">
+                        @Html.EditorFor(model => model.IsAdmin)
+                        @Html.ValidationMessageFor(model => model.IsAdmin, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group" style="margin-top: 30px;">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Dar de alta al usuario" class="btnSave" />
                 </div>
             </div>
         </div>
+    }
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Dar de alta al usuario" class="btn btn-default" />
-            </div>
-        </div>
+    <div class="form-actions no-color">
+        <button class="btnSave">
+
+            @Html.ActionLink("Volver atrás", "Index", null, new { @style = "color: white;" })
+
+        </button>
     </div>
-}
-
-<div>
-    @Html.ActionLink("Volver al listado de usuarios", "Index")
 </div>

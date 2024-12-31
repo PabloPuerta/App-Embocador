@@ -6,28 +6,70 @@
     background: linear-gradient(-135deg, #003366, #4CAF50);
 }
 
+
+.table-responsive {
+    max-height: 300px; 
+    overflow-y: auto; 
+}
+
 .fondoTurnos {
     background-color: white;
     width: fit-content;
     text-align: center;
     margin: auto;
-    margin-top: 80px;
+    margin-top: 100px;
     margin-bottom: 80px;
     padding: 25px;
     border: 3px solid black;
     border-radius: 10px;
 }
-    .fondoTurnos h2{
+    .fondoTurnos h2 {
         margin-top: 25px;
         margin-bottom: 50px;
+        font-weight: bolder;
+        color: black;
+        font-size: 50px;
     }
 
 .filtroFondo {
-    background-color: black;
-    padding: 10px 5px 10px 5px;
+    background-color: #808080;
+    padding: 20px 40px 20px 40px;
     border-radius: 10px;
+    margin: 50px 50px 50px 50px;
 }
     .filtroFondo p {
         color: white;
+        font-size: 20px;
+    }
+
+.separador {
+    display: inline-block;
+    width: 25px; 
+}
+
+.btnBuscar {
+    background-color: #003366;
+    border: 2px solid white;
+    color: white;
+    padding: 5px 10px 5px 10px;
+    margin-left: 25px;
+    border-radius: 10px;
+}
+    .btnBuscar:hover {
+        background-color: #4CAF50;
+        color: black;
+        border: 2px solid black;
+    }
+
+
+.link-blanco {
+    color: white; 
+    text-decoration: none; 
+    font-size: 25px;
+}
+
+    .link-blanco:hover {
+        color: black; 
+        text-decoration: none;
     }
 

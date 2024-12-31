@@ -12,11 +12,20 @@
 
         <h3>Panel de usuario</h3>
         <br />
-
         @if (TempData["Mensaje"] != null)
         {
             <script type="text/javascript">
-                alert('@TempData["Mensaje"] \nHora y Fecha último fichaje: @TempData["HoraFecha"]');
+         Swal.fire({
+             title: 'Información importante',
+             html: '<b>@Html.Raw(TempData["Mensaje"])</b><br><br>Fecha y Hora último fichaje: @Html.Raw(TempData["HoraFecha"])',
+             icon: 'info',
+             iconColor: 'red', 
+             confirmButtonText: 'Aceptar',
+             customClass: {
+                 confirmButton: 'btn btn-primary' 
+             },
+             buttonsStyling: false 
+         });
             </script>
         }
 

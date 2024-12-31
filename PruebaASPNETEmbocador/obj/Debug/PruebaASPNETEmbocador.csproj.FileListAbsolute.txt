@@ -361,3 +361,7 @@ C:\Users\pablo\Documents\GitHub\App-Embocador\PruebaASPNETEmbocador\obj\Debug\Pr
 C:\Users\pablo\Documents\GitHub\App-Embocador\PruebaASPNETEmbocador\bin\BouncyCastle.Crypto.dll
 C:\Users\pablo\Documents\GitHub\App-Embocador\PruebaASPNETEmbocador\bin\itextsharp.dll
 C:\Users\pablo\Documents\GitHub\App-Embocador\PruebaASPNETEmbocador\bin\itextsharp.xml
+C:\Users\pablo\Documents\GitHub\App-Embocador\PruebaASPNETEmbocador\bin\PagedList.dll
+C:\Users\pablo\Documents\GitHub\App-Embocador\PruebaASPNETEmbocador\bin\PagedList.Mvc.dll
+C:\Users\pablo\Documents\GitHub\App-Embocador\PruebaASPNETEmbocador\bin\PagedList.xml
+C:\Users\pablo\Documents\GitHub\App-Embocador\PruebaASPNETEmbocador\bin\PagedList.Mvc.xml

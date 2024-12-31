@@ -38,6 +38,13 @@
         font-weight: bolder;
     }
 
+.textButton {
+    color: white;
+}
+    .btnSave p:hover {
+        color: black;
+    }
+
 .formSpaces{
     color: black;
     font-weight: bolder;

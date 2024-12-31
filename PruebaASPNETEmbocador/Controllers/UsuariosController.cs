@@ -1,6 +1,9 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Security.Cryptography;
+using System.Text;
 using System.Web.Mvc;
 using PruebaASPNETEmbocador.Models;
 
@@ -51,12 +54,30 @@ namespace PruebaASPNETEmbocador.Controllers
         {
             if (ModelState.IsValid)
             {
+                usuarios.Contraseña = HashPassword(usuarios.Contraseña);
                 db.Usuarios.Add(usuarios);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
             return View(usuarios);
+        }
+
+       
+        public string HashPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+
+                return builder.ToString();
+            }
         }
 
         // GET: Usuarios/Edit/5
@@ -94,7 +115,7 @@ namespace PruebaASPNETEmbocador.Controllers
                 }
 
                 usuarioExistente.Nombre = usuarios.Nombre;
-                usuarioExistente.Contraseña = usuarios.Contraseña;
+                usuarioExistente.Contraseña = HashPassword(usuarios.Contraseña);
 
                 // Solo actualizar IsAdmin si el usuario es administrador
                 if ((bool)Session["IsAdmin"])
@@ -105,7 +126,9 @@ namespace PruebaASPNETEmbocador.Controllers
                 db.Entry(usuarioExistente).State = EntityState.Modified;
                 db.SaveChanges();
 
-               
+                // Establecer el mensaje en TempData
+                TempData["Mensaje"] = "Usuario actualizado correctamente. Por favor, vuelva a iniciar sesión.";
+
                 // Cerrar la sesión
                 Session.Clear();
 

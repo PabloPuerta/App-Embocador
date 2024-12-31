@@ -10,90 +10,120 @@
 <link rel="stylesheet" type="text/css" href="~/Assets/css/turnosHorarios.css">
 
 <div class="fondoTurnos">
+
     <h2>Turnos y horarios</h2>
 
     @if (isAdmin && loginPanel == "admin")
     {
-        <p>
-            @Html.ActionLink("Crear Nuevo Turno", "Create")
-        </p>
+        <button class="btnBuscar">
+            <p>
+                @Html.ActionLink("Crear Nuevo Turno", "Create", null, new { @class = "link-blanco" })
+            </p>
+        </button>
     }
 
     @using (Html.BeginForm("Index", "TurnosHorarios", FormMethod.Get))
     {
         <div class="filtroFondo">
             <p>
-                Nombre de Usuario: @Html.TextBox("searchString")
-                Fecha de Trabajo: @Html.TextBox("searchDate", "", new { type = "date" })
-                <input type="submit" value="Buscar" class="btn btn-default" />
+                Nombre de Usuario: @Html.TextBox("searchString", ViewBag.SearchString as string)
+                <span class="separador"></span>
+                Fecha de Trabajo: @Html.TextBox("searchDate", ViewBag.SearchDate as string, new { type = "date" })
+                <input type="submit" value="Buscar turno" class="btnBuscar" />
             </p>
         </div>
     }
 
-    <table class="table">
-        <tr>
-            <th>
-                Nombre del trabajador
-            </th>
-            <th>
-                Fecha de trabajo
-            </th>
-            <th>
-                Hora de inicio del turno
-            </th>
-            <th>
-                Hora de finalización del turno
-            </th>
-            <th></th>
-        </tr>
-
-        @foreach (var item in Model)
-        {
+    <div class="table-responsive">
+        <table class="table">
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Usuarios.Nombre)
-                </td>
-                <td>
-                    @item.Fecha.ToString("dd/MM/yyyy")
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.HoraInicio)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.HoraFin)
-                </td>
-                <td>
-                    @if (isAdmin && loginPanel == "admin")
-                    {
-                        <text>
-                            @Html.ActionLink("Editar", "Edit", new { id = item.IDTurnoHorario }) |
-                            @Html.ActionLink("Eliminar", "Delete", new { id = item.IDTurnoHorario })
-                        </text>
-                    }
-                </td>
+                <th style="text-align: center;">
+                    Nombre del trabajador
+                </th>
+                <th style="text-align: center;">
+                    Fecha de trabajo
+                </th>
+                <th style="text-align: center;">
+                    Hora de inicio del turno
+                </th>
+                <th style="text-align: center;">
+                    Hora de finalización del turno
+                </th>
+                <th></th>
             </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Usuarios.Nombre)
+                    </td>
+                    <td>
+                        @item.Fecha.ToString("dd/MM/yyyy")
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HoraInicio)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HoraFin)
+                    </td>
+                    <td>
+                        @if (isAdmin && loginPanel == "admin")
+                        {
+                            <text>
+                                @Html.ActionLink("Editar", "Edit", new { id = item.IDTurnoHorario }) |
+                                @Html.ActionLink("Eliminar", "Delete", new { id = item.IDTurnoHorario })
+                            </text>
+                        }
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+
+    <div style="text-align: center;">
+        @if (ViewBag.CurrentPage > 1)
+        {
+            <a href="@Url.Action("Index", new { page = ViewBag.CurrentPage - 1, searchString = ViewBag.SearchString, searchDate = ViewBag.SearchDate })">Anterior</a>
         }
 
-    </table>
+        @for (int i = 1; i <= ViewBag.TotalPages; i++)
+        {
+            if (i == ViewBag.CurrentPage)
+            {
+                <span>@i</span>
+            }
+            else
+            {
+                <a href="@Url.Action("Index", new { page = i, searchString = ViewBag.SearchString, searchDate = ViewBag.SearchDate })">@i</a>
+            }
+        }
 
-    <div style="text-align: center; margin-top: 50px;">
+        @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+        {
+            <a href="@Url.Action("Index", new { page = ViewBag.CurrentPage + 1, searchString = ViewBag.SearchString, searchDate = ViewBag.SearchDate })">Siguiente</a>
+        }
+    </div>
+
+    <div style="text-align: center; margin-top: 100px;">
         @if (isAdmin && loginPanel == "admin")
         {
-            <button class="btnNewUser" onclick="location.href='@Url.Action("PanelAdmin", "InicioAdmins")'">
-                <p>Volver atrás</p>
+            <button class="btnBuscar" onclick="location.href='@Url.Action("PanelAdmin", "InicioAdmins")'">
+                <p class="link-blanco">Volver atrás</p>
             </button>
         }
         else
         {
-            <button class="btnNewUser" onclick="location.href='@Url.Action("PanelTrabajador", "InicioTrabajadores")'">
-                <p>Volver atrás</p>
+            <button class="btnBuscar" onclick="location.href='@Url.Action("PanelTrabajador", "InicioTrabajadores")'">
+                <p class="link-blanco">Volver atrás</p>
             </button>
         }
     </div>
 
-    <div style="text-align: center; margin-top: 20px;">
-        <button class="btnNewUser" onclick="location.href='@Url.Action("ExportToPdf", "TurnosHorarios", new { searchString = Request["searchString"], searchDate = Request["searchDate"] })'">
-            <p>Exportar a PDF</p>
+    <div style="text-align: center; margin-top: 50px;">
+        <button class="btnBuscar" onclick="location.href='@Url.Action("ExportToPdf", "TurnosHorarios", new { searchString = Request["searchString"], searchDate = Request["searchDate"] })'">
+            <p class="link-blanco">Exportar a PDF</p>
         </button>
     </div>
 </div>
