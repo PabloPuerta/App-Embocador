@@ -1,0 +1,89 @@
+﻿body {
+    background: #4CAF50;
+    background: -webkit-linear-gradient(-135deg, #003366, #4CAF50);
+    background: -o-linear-gradient(-135deg, #003366, #4CAF50);
+    background: -moz-linear-gradient(-135deg, #003366, #4CAF50);
+    background: linear-gradient(-135deg, #003366, #4CAF50);
+}
+
+
+.tittleAdminUser{
+    background-color: white;
+    width: fit-content;
+    text-align: center;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    padding: 25px;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+    .tittleAdminUser h2{
+        font-weight: bolder;
+    }
+    .tittleAdminUser p{
+        margin-top: 15px;
+    }
+
+
+.btnNewUser {
+    background-color: #003366;
+    margin-top: 25px;
+    border: 3px solid white;
+    border-radius: 10px;
+    padding: 10px 20px 10px 20px;
+}
+    .btnNewUser p {
+        font-family: "Nunito", serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        color: white;
+    }
+    .btnNewUser:hover {
+        background: #4CAF50;
+        color: black;
+        border: 3px solid black;
+    }
+    .btnNewUser p:hover {
+        text-decoration: none;
+        color: black;
+    }
+
+
+.fondoTablaUsuarios {
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+
+.tablaListadoTrabajadores {
+    margin: auto;
+    margin-top: 50px;
+    color: black;
+    border: 5px solid black;
+}
+    .tablaListadoTrabajadores th {
+        font-weight: bolder;
+        color: blue;
+        text-align: center;
+    }
+    .tablaListadoTrabajadores td {
+        text-align: center;
+        font-weight: bolder;
+    }
+        .tablaListadoTrabajadores td a{
+            color: black;
+            font-size: 16px;
+            padding: 0px 10px 0px 10px;
+            font-weight: bolder;
+        }
+            .tablaListadoTrabajadores td a:hover {
+                color: blue;
+                text-decoration: none;
+            }
+
+
+
+

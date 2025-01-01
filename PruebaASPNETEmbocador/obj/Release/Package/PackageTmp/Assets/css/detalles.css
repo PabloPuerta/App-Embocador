@@ -1,0 +1,61 @@
+﻿body {
+    background: #4CAF50;
+    background: -webkit-linear-gradient(-135deg, #003366, #4CAF50);
+    background: -o-linear-gradient(-135deg, #003366, #4CAF50);
+    background: -moz-linear-gradient(-135deg, #003366, #4CAF50);
+    background: linear-gradient(-135deg, #003366, #4CAF50);
+}
+
+.fondoEdit {
+    background-color: #e1dede;
+    display: flex;
+    align-items: center;
+    margin: 50px 50px 50px 50px;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 8px solid black;
+}
+
+.cabeceraEdit {
+    padding-top: 50px;
+}
+
+.btnSave {
+    width: 200px;
+    height: 50px;
+    background-color: #003366;
+    color: white;
+    border: 3px solid white;
+    padding: 10px;
+    margin-top: 25px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+    .btnSave:hover {
+        background-color: #4CAF50;
+        color: black;
+        font-weight: bolder;
+        border-color: black;
+    }
+
+.infoUser {
+    color: black;
+    
+    font-size: 15px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.cabeceraUser {
+    text-align: center;
+    padding-top: 20px;
+    font-weight: bolder;
+}
+
+.formulario-centrado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

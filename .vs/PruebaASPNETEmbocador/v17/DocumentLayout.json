@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|c:\\users\\pablo\\documents\\github\\app-embocador\\pruebaaspnetembocador\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|solutionrelative:pruebaaspnetembocador\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|c:\\users\\pablo\\documents\\github\\app-embocador\\pruebaaspnetembocador\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|solutionrelative:pruebaaspnetembocador\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|c:\\users\\pablo\\documents\\github\\app-embocador\\pruebaaspnetembocador\\views\\turnoshorarios\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|solutionrelative:pruebaaspnetembocador\\views\\turnoshorarios\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|c:\\users\\pablo\\documents\\github\\app-embocador\\pruebaaspnetembocador\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|solutionrelative:pruebaaspnetembocador\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|c:\\users\\pablo\\documents\\github\\app-embocador\\pruebaaspnetembocador\\views\\usuarios\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|solutionrelative:pruebaaspnetembocador\\views\\usuarios\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\pruebaaspnetembocador\\views\\turnoshorarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|solutionrelative:pruebaaspnetembocador\\views\\turnoshorarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 410,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -31,51 +31,44 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 410,
-          "SelectedChildIndex": 0,
-          "Children": [
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\PruebaASPNETEmbocador\\Web.config",
+              "RelativeDocumentMoniker": "PruebaASPNETEmbocador\\Web.config",
+              "ToolTip": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\PruebaASPNETEmbocador\\Web.config",
+              "RelativeToolTip": "PruebaASPNETEmbocador\\Web.config",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAqwEgAAACtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-12-31T20:53:13.139Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\PruebaASPNETEmbocador\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "PruebaASPNETEmbocador\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\PruebaASPNETEmbocador\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "PruebaASPNETEmbocador\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\PruebaASPNETEmbocador\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "PruebaASPNETEmbocador\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\PruebaASPNETEmbocador\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "PruebaASPNETEmbocador\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-31T19:07:32.629Z",
+              "WhenOpened": "2024-12-31T20:44:23.434Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\PruebaASPNETEmbocador\\Views\\Usuarios\\Details.cshtml",
-              "RelativeDocumentMoniker": "PruebaASPNETEmbocador\\Views\\Usuarios\\Details.cshtml",
-              "ToolTip": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\PruebaASPNETEmbocador\\Views\\Usuarios\\Details.cshtml",
-              "RelativeToolTip": "PruebaASPNETEmbocador\\Views\\Usuarios\\Details.cshtml",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACgAAAACAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\PruebaASPNETEmbocador\\Views\\TurnosHorarios\\Index.cshtml",
+              "RelativeDocumentMoniker": "PruebaASPNETEmbocador\\Views\\TurnosHorarios\\Index.cshtml",
+              "ToolTip": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\PruebaASPNETEmbocador\\Views\\TurnosHorarios\\Index.cshtml",
+              "RelativeToolTip": "PruebaASPNETEmbocador\\Views\\TurnosHorarios\\Index.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAADYAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-31T19:05:21.457Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\PruebaASPNETEmbocador\\Views\\TurnosHorarios\\Create.cshtml",
-              "RelativeDocumentMoniker": "PruebaASPNETEmbocador\\Views\\TurnosHorarios\\Create.cshtml",
-              "ToolTip": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\PruebaASPNETEmbocador\\Views\\TurnosHorarios\\Create.cshtml",
-              "RelativeToolTip": "PruebaASPNETEmbocador\\Views\\TurnosHorarios\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-31T18:48:37.812Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-31T20:30:12.5Z"
             }
           ]
         }

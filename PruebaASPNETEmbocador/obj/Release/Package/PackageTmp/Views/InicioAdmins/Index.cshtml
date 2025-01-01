@@ -1,0 +1,62 @@
+﻿@model PruebaASPNETEmbocador.Models.Usuarios
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100">
+
+            <div class="login100-pic js-tilt" data-tilt>
+                <img src="~/Assets/imagenes/Embocador-09.jpg" alt="Imagen de la gasolinera Embocador">
+            </div>
+
+            @using (Html.BeginForm("CheckLogin", "InicioAdmins", FormMethod.Post, new { @class = "login100-form validate-form" }))
+            {
+                @Html.Hidden("loginPanel", "admin") <!-- O "trabajador" dependiendo del panel -->
+                <span class="login100-form-title">
+                    Inicio de sesión para administradores
+                </span>
+
+                <div class="wrap-input100 validate-input" data-validate="Nombre de usuario administrador requerido">
+                    @Html.TextBoxFor(m => m.Nombre, new { @class = "input100", placeholder = "Usuario" })
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Contraseña requerida">
+                    @Html.PasswordFor(m => m.Contraseña, new { @class = "input100", placeholder = "Contraseña" })
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                    </span>
+                </div>
+
+                <div class="container-login100-form-btn">
+                    <button class="login100-form-btn" type="submit">
+                        Iniciar sesión
+                    </button>
+                </div>
+            }
+            @section Scripts {
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+            }
+        </div>
+    </div>
+</div>
+
+
+

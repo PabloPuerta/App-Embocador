@@ -1,0 +1,86 @@
+﻿body {
+    background: #4CAF50;
+    background: -webkit-linear-gradient(-135deg, #003366, #4CAF50);
+    background: -o-linear-gradient(-135deg, #003366, #4CAF50);
+    background: -moz-linear-gradient(-135deg, #003366, #4CAF50);
+    background: linear-gradient(-135deg, #003366, #4CAF50);
+}
+
+.limiter {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.contenedorIdUsuario {
+    text-align: center;
+    background-color: #e1dede;
+    margin: 50px 25px 50px 25px;
+    padding-top: 25px;
+    border-radius: 20px;
+    border: 8px solid black;
+}
+    .contenedorIdUsuario h3 {
+        font-weight: bolder;
+        color: black;
+        font-size: 50px;
+    }
+    .contenedorIdUsuario p{
+        color: black;
+        font-size: 20px;
+        margin-bottom: 50px;
+        margin-top: 50px;
+        font-weight: bolder;
+        text-decoration: underline;
+    }
+
+.containerNav {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+}
+
+.barraNavAdmin {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+}
+
+.navLink{
+    font-size: 20px;
+    color: black;
+    padding-bottom: 15px;
+}
+    .navLink:hover {
+        color: blue;
+        text-decoration: none;
+    }
+
+.btnCerrarSesion {
+    width: 200px;
+    height: 50px;
+    background-color: #003366;
+    color: white;
+    border: 3px solid black;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+    .btnCerrarSesion:hover {
+        background-color: #4CAF50;
+        color: black;
+        font-weight: bolder;
+    }
+
+.btn-primary {
+    background-color: #003366; /* Cambia este color al color primario de tu proyecto */
+    border-color: white; /* Cambia este color al color primario de tu proyecto */
+    color: white; /* Color del texto */
+}
+
+    .btn-primary:hover {
+        background-color: #4CAF50; /* Cambia este color al color de hover de tu proyecto */
+        border-color: black; /* Cambia este color al color de hover de tu proyecto */
+    }

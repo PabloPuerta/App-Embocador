@@ -1,0 +1,95 @@
+﻿@model PruebaASPNETEmbocador.Models.Usuarios
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    bool isAdmin = Session["IsAdmin"] != null && (bool)Session["IsAdmin"];
+    string loginPanel = ViewBag.LoginPanel as string;
+}
+
+<link rel="stylesheet" type="text/css" href="~/Assets/css/edit.css">
+
+<div class="fondoEdit">
+
+    <div class="cabeceraEdit">
+        <h1>Editar datos de usuario</h1>
+    </div>
+
+    @if (ViewBag.ErrorMessage != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            @ViewBag.ErrorMessage
+        </div>
+    }
+
+    @using (Html.BeginForm("Edit", "Usuarios", FormMethod.Post, new { id = "editForm" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.Hidden("loginPanel", loginPanel) <!-- Pasar la variable loginPanel al método POST -->
+
+        <div class="form-horizontal" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.IDUsuario)
+
+            <div class="form-group">
+                <p class="formSpaces">Nombre de usuario</p>
+                <div class="col-md-10" style="max-width: 100%">
+                    @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p class="formSpaces">Introduzca una nueva contraseña</p>
+                <div class="col-md-10" style="max-width: 100%">
+                    @Html.PasswordFor(model => model.Contraseña, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+                    @Html.ValidationMessageFor(model => model.Contraseña, "", new { @class = "text-danger" })
+            </div>
+
+            @if (isAdmin)
+            {
+                <div class="form-group">
+                    <p class="formSpaces">¿El usuario es administrador?</p>
+                    <div class="col-md-10" style="max-width: 100%">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.IsAdmin)
+                            @Html.ValidationMessageFor(model => model.IsAdmin, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            }
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10" style="margin-top: 30px;">
+                    <input type="submit" value="Guardar cambios" class="btnSave" onclick="return showAlert();" />
+                </div>
+
+                <div style="text-align: center; margin-top: 50px;">
+                    @if (isAdmin && loginPanel == "admin")
+                    {
+                        <button type="button" class="btnSave" onclick="location.href='@Url.Action("PanelAdmin", "InicioAdmins")'">
+                            <p class="textButton">Volver atrás</p>
+                        </button>
+                    }
+                    else
+                    {
+                <button type="button" class="btnSave" onclick="location.href='@Url.Action("PanelTrabajador", "InicioTrabajadores")'">
+                    <p class="textButton">Volver atrás</p>
+                </button>
+                    }
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<script type="text/javascript">
+    function showAlert() {
+        alert('Usuario actualizado correctamente. Por favor, vuelva a iniciar sesión.');
+        return true;
+    }
+</script>
+
+

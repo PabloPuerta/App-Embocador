@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EmbocadorModelStoreContainer" CdmEntityContainer="EmbocadorEntities1">
+    <EntitySetMapping Name="TurnosTrabajadoresEmbocador">
+      <EntityTypeMapping TypeName="EmbocadorModel.TurnosTrabajadoresEmbocador">
+        <MappingFragment StoreEntitySet="TurnosTrabajadoresEmbocador">
+          <ScalarProperty Name="RegistroSalida" ColumnName="RegistroSalida" />
+          <ScalarProperty Name="RegistroEntrada" ColumnName="RegistroEntrada" />
+          <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+          <ScalarProperty Name="IDTurno" ColumnName="IDTurno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="EmbocadorModel.Usuarios">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+          <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TurnosHorarios">
+      <EntityTypeMapping TypeName="EmbocadorModel.TurnosHorarios">
+        <MappingFragment StoreEntitySet="TurnosHorarios">
+          <ScalarProperty Name="HoraFin" ColumnName="HoraFin" />
+          <ScalarProperty Name="HoraInicio" ColumnName="HoraInicio" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+          <ScalarProperty Name="IDTurnoHorario" ColumnName="IDTurnoHorario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

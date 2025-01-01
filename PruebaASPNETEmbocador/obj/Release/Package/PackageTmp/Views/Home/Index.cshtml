@@ -1,0 +1,57 @@
+﻿@model PruebaASPNETEmbocador.Models.Usuarios
+
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="limiter">
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert-danger">
+            @TempData["ErrorMessage"]
+        </div>
+    }
+
+    <div class="container-login100">
+        <div class="wrap-login100">
+
+            <div class="login100-pic js-tilt" data-tilt>
+                <img src="~/Assets/imagenes/Embocador-09.jpg" alt="Imagen de la gasolinera Embocador">
+            </div>
+
+            @using (Html.BeginForm("LoginTrabajadores", "InicioTrabajadores", FormMethod.Post, new { @class = "login100-form validate-form" }))
+            {
+                @Html.Hidden("loginPanel", "trabajador") <!-- O "admin" dependiendo del panel -->
+                <span class="login100-form-title">
+                    Inicio de sesión para trabajadores
+                </span>
+
+                <div class="wrap-input100 validate-input" data-validate="Nombre se usuario requerido">
+                    @Html.TextBoxFor(m => m.Nombre, new { @class = "input100", placeholder = "Usuario" })
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Contraseña requerida">
+                    @Html.PasswordFor(m => m.Contraseña, new { @class = "input100", placeholder = "Contraseña" })
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                    </span>
+                </div>
+
+                <div class="container-login100-form-btn">
+                    <button class="login100-form-btn" type="submit">
+                        Iniciar sesión
+                    </button>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>
+
