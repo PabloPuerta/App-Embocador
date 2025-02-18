@@ -6,25 +6,26 @@
 }
 
 <link rel="stylesheet" type="text/css" href="~/Assets/css/loginAdminOk.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-<div class="limiter">
-    <div class="contenedorIdUsuario">
+<div class="container-fluid d-flex align-items-center justify-content-center vh-100">
+    <div class="contenedorIdUsuario p-5">
 
         <p>Ha iniciado sesión como: @ViewBag.nombreUsuario</p>
         <br />
-        <h3>Panel de administrador</h3>
+        <h3 class="text-center">Panel de administrador</h3>
         <br />
 
-        <div class="containerNav">
+        <div class="containerNav text-center">
 
             <nav class="barraNavAdmin">
                 @Html.ActionLink("Gestionar usuarios", "Index", "Usuarios", new { loginPanel = "admin" }, new { @class = "navLink" })
-                @Html.ActionLink("Consultar turnos y horarios", "Index", "TurnosHorarios", new { loginPanel = "admin" }, new { @class = "navLink" })
+                @Html.ActionLink("Consultar y gestionar turnos y horarios", "Index", "TurnosHorarios", new { loginPanel = "admin" }, new { @class = "navLink" })
                 @Html.ActionLink("Gestionar mi usuario", "Edit", "Usuarios", new { id = Model.IDUsuario, loginPanel = "admin" }, new { @class = "navLink" })
             </nav>
 
         </div>
-        <div style="margin-top: 50px; margin-bottom: 50px;">
+        <div class="text-center mt-5 mb-5">
             @using (Html.BeginForm("Logout", "InicioAdmins", FormMethod.Post))
             {
                 @Html.Hidden("loginPanel", "admin") <!-- Campo oculto para loginPanel -->
@@ -34,4 +35,6 @@
 
     </div>
 </div>
+
+
 

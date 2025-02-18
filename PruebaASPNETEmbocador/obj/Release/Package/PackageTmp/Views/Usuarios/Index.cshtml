@@ -9,57 +9,64 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 
-<div class="tittleAdminUser">
-    <h2>Listado y administración de usuarios</h2>
-</div>
+<div class="container-fluid d-flex align-items-center justify-content-center vh-100">
+    <div class="container-scroll">
+        <div class="fondoUsuarios">
+            <div class="tittleAdminUser">
+                <h2>Listado y administración de usuarios</h2>
+            </div>
 
-<div style="text-align: center">
-    <button class="btnNewUser" onclick="location.href='@Url.Action("Create", "Usuarios")'">
-        <p>Dar de alta un nuevo usuario</p>
-    </button>
-</div>
+            <div style="text-align: center">
+                <button class="btnNewUser" onclick="location.href='@Url.Action("Create", "Usuarios")'">
+                    <p style="margin: auto;">Dar de alta un nuevo usuario</p>
+                </button>
+            </div>
 
 
-<div class="fondoTablaUsuarios">
-    <table class="table tablaListadoTrabajadores">
-        <tr>
-            <th>
-                ID de usuario
-            </th>
-            <th>
-                Nombre de usuario
-            </th>
-            <th>
-                ¿El usuario es administrador?
-            </th>
-            <th></th>
-        </tr>
+            <div class="table-responsive">
+                <table class="table">
+                    <tr>
+                        <th>
+                            ID de usuario
+                        </th>
+                        <th>
+                            Nombre de usuario
+                        </th>
+                        <th>
+                            ¿El usuario es administrador?
+                        </th>
+                        <th></th>
+                    </tr>
 
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.IDUsuario)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Nombre)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.IsAdmin)
-                </td>
-                <td>
-                    @Html.ActionLink("Editar", "Edit", new { id = item.IDUsuario, loginPanel = "admin" }) |
-                    @Html.ActionLink("Detalles del usuario", "Details", new { id = item.IDUsuario })
-                    @Html.ActionLink("Eliminar usuario", "Delete", new { id = item.IDUsuario })
-                </td>
-            </tr>
-        }
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.IDUsuario)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Nombre)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.IsAdmin)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Editar", "Edit", new { id = item.IDUsuario, loginPanel = "admin" }) |
+                                @Html.ActionLink("Detalles del usuario", "Details", new { id = item.IDUsuario }) |
+                                @Html.ActionLink("Eliminar usuario", "Delete", new { id = item.IDUsuario })
+                            </td>
+                        </tr>
+                    }
 
-    </table>
-</div>
+                </table>
+            </div>
 
-<div style="text-align: center; margin-top: 50px;">
-    <button class="btnNewUser" onclick="location.href='@Url.Action("PanelAdmin", "InicioAdmins")'">
-        <p>Volver atrás</p>
-    </button>
-</div>
+            <div style="text-align: center; margin-top: 50px;">
+                <button class="btnNewUser" onclick="location.href='@Url.Action("PanelAdmin", "InicioAdmins")'">
+                    <p style="margin: auto;">Volver atrás</p>
+                </button>
+            </div>
+            
+        </div>
+        </div>
+    </div>

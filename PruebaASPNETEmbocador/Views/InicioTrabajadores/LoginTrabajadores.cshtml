@@ -6,48 +6,49 @@
 }
 
 <link rel="stylesheet" type="text/css" href="~/Assets/css/loginAdminOk.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-<div class="limiter">
-    <div class="contenedorIdUsuario">
+<div class="container-fluid d-flex align-items-center justify-content-center vh-100">
+    <div class="contenedorIdUsuario p-4">
 
-        <h3>Panel de usuario</h3>
+        <h3 class="text-center">Panel de usuario</h3>
         <br />
-        @if (TempData["Mensaje"] != null)
+        @if (TempData["MensajeFichar"] != null)
         {
             <script type="text/javascript">
-         Swal.fire({
-             title: 'Información importante',
-             html: '<b>@Html.Raw(TempData["Mensaje"])</b><br><br>Fecha y Hora último fichaje: @Html.Raw(TempData["HoraFecha"])',
-             icon: 'info',
-             iconColor: 'red', 
-             confirmButtonText: 'Aceptar',
-             customClass: {
-                 confirmButton: 'btn btn-primary' 
-             },
-             buttonsStyling: false 
-         });
+                Swal.fire({
+                    title: 'Información importante',
+                    html: '<b>@Html.Raw(TempData["MensajeFichar"])</b><br><br>Fecha y Hora último fichaje: @Html.Raw(TempData["HoraFecha"])',
+                    icon: 'info',
+                    iconColor: 'red',
+                    confirmButtonText: 'Aceptar',
+                    customClass: {
+                        confirmButton: 'btn btn-primary'
+                    },
+                    buttonsStyling: false
+                });
             </script>
         }
 
-        <div class="containerNav">
+        <div class="containerNav text-center">
 
-            <nav class="barraNavAdmin">
+            <nav class="barraNavAdmin nav justify-content-center">
                 @using (Html.BeginForm("RegistrarEntrada", "FicharTurnos", FormMethod.Post))
                 {
                     @Html.Hidden("loginPanel", "trabajador") <!-- Campo oculto para loginPanel -->
-                    <button type="submit" class="navLink" style="font-weight: bolder;">Registrar entrada</button>
+                    <button type="submit" class="navLink nav-item nav-link" style="font-weight: bolder; border: none; background: none;">Registrar entrada</button>
                 }
                 @using (Html.BeginForm("RegistrarSalida", "FicharTurnos", FormMethod.Post))
                 {
                     @Html.Hidden("loginPanel", "trabajador") <!-- Campo oculto para loginPanel -->
-                    <button type="submit" class="navLink" style="font-weight: bolder;">Registrar salida</button>
+                    <button type="submit" class="navLink nav-item nav-link" style="font-weight: bolder; border: none; background: none;">Registrar salida</button>
                 }
-                @Html.ActionLink("Consultar turnos y horarios", "Index", "TurnosHorarios", new { area = "", loginPanel = "trabajador" }, new { @class = "navLink" })
-                @Html.ActionLink("Gestionar mi usuario", "Edit", "Usuarios", new { id = Model.IDUsuario, loginPanel = "trabajador" }, new { @class = "navLink" })
+                @Html.ActionLink("Consultar turnos y horarios", "Index", "TurnosHorarios", new { area = "", loginPanel = "trabajador" }, new { @class = "navLink nav-item nav-link" })
+                @Html.ActionLink("Gestionar mi usuario", "Edit", "Usuarios", new { id = Model.IDUsuario, loginPanel = "trabajador" }, new { @class = "navLink nav-item nav-link" })
             </nav>
 
         </div>
-        <div style="margin-top: 50px; margin-bottom: 50px;">
+        <div class="text-center mt-5 mb-5">
             @using (Html.BeginForm("Logout", "InicioAdmins", FormMethod.Post))
             {
                 @Html.Hidden("loginPanel", "trabajador") <!-- Campo oculto para loginPanel -->
@@ -57,3 +58,6 @@
 
     </div>
 </div>
+
+
+

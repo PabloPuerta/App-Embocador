@@ -9,121 +9,124 @@
 
 <link rel="stylesheet" type="text/css" href="~/Assets/css/turnosHorarios.css">
 
-<div class="fondoTurnos">
+<div class="container-fluid d-flex align-items-center justify-content-center vh-100">
 
-    <h2>Turnos y horarios</h2>
+    <div class="container-scroll">
+        <div class="fondoTurnos">
 
-    @if (isAdmin && loginPanel == "admin")
-    {
-        <button class="btnBuscar">
-            <p>
-                @Html.ActionLink("Crear Nuevo Turno", "Create", null, new { @class = "link-blanco" })
-            </p>
-        </button>
-    }
+            <h2>Turnos y horarios</h2>
 
-    @using (Html.BeginForm("Index", "TurnosHorarios", FormMethod.Get))
-    {
-        <div class="filtroFondo">
-            <p>
-                Nombre de Usuario: @Html.TextBox("searchString", ViewBag.SearchString as string)
-                <span class="separador"></span>
-                Fecha de Trabajo: @Html.TextBox("searchDate", ViewBag.SearchDate as string, new { type = "date" })
-                <input type="submit" value="Buscar turno" class="btnBuscar" />
-            </p>
+            @if (isAdmin && loginPanel == "admin")
+            {
+                <button class="btnBuscar">
+                    <p style="margin: auto;"> @Html.ActionLink("Crear Nuevo Turno", "Create", null, new { @class = "link-blanco" }) </p>
+                </button>
+            }
+
+            @using (Html.BeginForm("Index", "TurnosHorarios", FormMethod.Get))
+            {
+                <div class="filtroFondo">
+                    <p style="margin: auto;">
+                        Nombre de Usuario: @Html.TextBox("searchString", ViewBag.SearchString as string)
+                        <span class="separador"></span>
+                        Fecha de Trabajo: @Html.TextBox("searchDate", ViewBag.SearchDate as string, new { type = "date" })
+                        <input type="submit" value="Buscar turno" class="btnBuscar" />
+                    </p>
+                </div>
+            }
+
+            <div class="table-responsive">
+                <table class="table">
+                    <tr>
+                        <th style="text-align: center;">
+                            Nombre del trabajador
+                        </th>
+                        <th style="text-align: center;">
+                            Fecha de trabajo
+                        </th>
+                        <th style="text-align: center;">
+                            Hora de inicio del turno
+                        </th>
+                        <th style="text-align: center;">
+                            Hora de finalización del turno
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Usuarios.Nombre)
+                            </td>
+                            <td>
+                                @item.Fecha.ToString("dd/MM/yyyy")
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.HoraInicio)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.HoraFin)
+                            </td>
+                            <td>
+                                @if (isAdmin && loginPanel == "admin")
+                                {
+                                    <text>
+                                        @Html.ActionLink("Eliminar turno", "Delete", new { id = item.IDTurnoHorario })
+                                    </text>
+                                }
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+            <br />
+            <br />
+            <div style="text-align: center;">
+                @if (ViewBag.CurrentPage > 1)
+                {
+                    <a href="@Url.Action("Index", new { page = ViewBag.CurrentPage - 1, searchString = ViewBag.SearchString, searchDate = ViewBag.SearchDate })">Anterior</a>
+                }
+
+                @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                {
+                    if (i == ViewBag.CurrentPage)
+                    {
+                        <span>@i</span>
+                    }
+                    else
+                    {
+                        <a href="@Url.Action("Index", new { page = i, searchString = ViewBag.SearchString, searchDate = ViewBag.SearchDate })">@i</a>
+                    }
+                }
+
+                @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+                {
+                    <a href="@Url.Action("Index", new { page = ViewBag.CurrentPage + 1, searchString = ViewBag.SearchString, searchDate = ViewBag.SearchDate })">Siguiente</a>
+                }
+            </div>
+
+            <div style="text-align: center; margin-top: 20px;">
+                @if (isAdmin && loginPanel == "admin")
+                {
+                    <button class="btnBuscar" style="margin-top: 50px;" onclick="location.href='@Url.Action("PanelAdmin", "InicioAdmins")'">
+                        <a class="link-blanco">Volver atrás</a>
+                    </button>
+                }
+                else
+                {
+                    <button class="btnBuscar" style="margin-top: 50px;" onclick="location.href='@Url.Action("PanelTrabajador", "InicioTrabajadores")'">
+                        <a class="link-blanco">Volver atrás</a>
+                    </button>
+                }
+            </div>
+
+            <div style="text-align: center; margin-top: 25px;">
+                <button class="btnBuscar" style="margin-bottom: 25px;" onclick="location.href='@Url.Action("ExportToPdf", "TurnosHorarios", new { searchString = Request["searchString"], searchDate = Request["searchDate"] })'">
+                    <a class="link-blanco">Exportar a PDF</a>
+                </button>
+            </div>
         </div>
-    }
-
-    <div class="table-responsive">
-        <table class="table">
-            <tr>
-                <th style="text-align: center;">
-                    Nombre del trabajador
-                </th>
-                <th style="text-align: center;">
-                    Fecha de trabajo
-                </th>
-                <th style="text-align: center;">
-                    Hora de inicio del turno
-                </th>
-                <th style="text-align: center;">
-                    Hora de finalización del turno
-                </th>
-                <th></th>
-            </tr>
-
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Usuarios.Nombre)
-                    </td>
-                    <td>
-                        @item.Fecha.ToString("dd/MM/yyyy")
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.HoraInicio)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.HoraFin)
-                    </td>
-                    <td>
-                        @if (isAdmin && loginPanel == "admin")
-                        {
-                            <text>            
-                                @Html.ActionLink("Eliminar turno", "Delete", new { id = item.IDTurnoHorario })
-                            </text>
-                        }
-                    </td>
-                </tr>
-            }
-
-        </table>
+        </div>
     </div>
-
-    <div style="text-align: center;">
-        @if (ViewBag.CurrentPage > 1)
-        {
-            <a href="@Url.Action("Index", new { page = ViewBag.CurrentPage - 1, searchString = ViewBag.SearchString, searchDate = ViewBag.SearchDate })">Anterior</a>
-        }
-
-        @for (int i = 1; i <= ViewBag.TotalPages; i++)
-        {
-            if (i == ViewBag.CurrentPage)
-            {
-                <span>@i</span>
-            }
-            else
-            {
-                <a href="@Url.Action("Index", new { page = i, searchString = ViewBag.SearchString, searchDate = ViewBag.SearchDate })">@i</a>
-            }
-        }
-
-        @if (ViewBag.CurrentPage < ViewBag.TotalPages)
-        {
-            <a href="@Url.Action("Index", new { page = ViewBag.CurrentPage + 1, searchString = ViewBag.SearchString, searchDate = ViewBag.SearchDate })">Siguiente</a>
-        }
-    </div>
-
-    <div style="text-align: center; margin-top: 100px;">
-        @if (isAdmin && loginPanel == "admin")
-        {
-            <button class="btnBuscar" onclick="location.href='@Url.Action("PanelAdmin", "InicioAdmins")'">
-                <p class="link-blanco">Volver atrás</p>
-            </button>
-        }
-        else
-        {
-            <button class="btnBuscar" onclick="location.href='@Url.Action("PanelTrabajador", "InicioTrabajadores")'">
-                <p class="link-blanco">Volver atrás</p>
-            </button>
-        }
-    </div>
-
-    <div style="text-align: center; margin-top: 50px;">
-        <button class="btnBuscar" onclick="location.href='@Url.Action("ExportToPdf", "TurnosHorarios", new { searchString = Request["searchString"], searchDate = Request["searchDate"] })'">
-            <p class="link-blanco">Exportar a PDF</p>
-        </button>
-    </div>
-</div>
-

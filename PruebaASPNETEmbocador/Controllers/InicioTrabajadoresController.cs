@@ -8,6 +8,7 @@ using PruebaASPNETEmbocador.Models;
 
 namespace PruebaASPNETEmbocador.Controllers
 {
+   
     public class InicioTrabajadoresController : Controller
     {
         private static EmbocadorEntities1 db = new EmbocadorEntities1();

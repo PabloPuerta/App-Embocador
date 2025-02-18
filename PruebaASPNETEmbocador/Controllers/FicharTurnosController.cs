@@ -37,7 +37,7 @@ namespace PruebaASPNETEmbocador.Controllers
                 if (ultimaEntrada != null && ultimaEntrada.RegistroEntrada > DateTime.Now.AddHours(-24))
                 {
                     // Almacenar el mensaje de error en TempData
-                    TempData["Mensaje"] = "No puedes fichar una nueva entrada hasta que hayan pasado 24 horas desde la ultima entrada.";
+                    TempData["MensajeFichar"] = "No puedes fichar una nueva entrada hasta que hayan pasado 24 horas desde la ultima entrada.";
                     TempData["HoraFecha"] = ultimaEntrada.RegistroEntrada.ToString();
                     return RedirectToAction("PanelTrabajador", "InicioTrabajadores");
                 }
@@ -51,7 +51,7 @@ namespace PruebaASPNETEmbocador.Controllers
                 db.SaveChanges();
 
                 // Almacenar el mensaje de confirmación en TempData
-                TempData["Mensaje"] = "Entrada registrada correctamente. <br>";
+                TempData["MensajeFichar"] = "Entrada registrada correctamente. <br>";
                 TempData["HoraFecha"] = turno.RegistroEntrada.ToString();
             }
             return RedirectToAction("PanelTrabajador", "InicioTrabajadores");
@@ -76,7 +76,7 @@ namespace PruebaASPNETEmbocador.Controllers
                 if (ultimaSalida != null && ultimaSalida.RegistroSalida > DateTime.Now.AddHours(-24))
                 {
                     // Almacenar el mensaje de error en TempData
-                    TempData["Mensaje"] = "No puedes fichar una nueva salida hasta que hayan pasado 24 horas desde la ultima salida.";
+                    TempData["MensajeFichar"] = "No puedes fichar una nueva salida hasta que hayan pasado 24 horas desde la ultima salida.";
                     TempData["HoraFecha"] = ultimaSalida.RegistroSalida.ToString();
                     return RedirectToAction("PanelTrabajador", "InicioTrabajadores");
                 }
@@ -94,7 +94,7 @@ namespace PruebaASPNETEmbocador.Controllers
                     db.SaveChanges();
 
                     // Almacenar el mensaje de confirmación en TempData
-                    TempData["Mensaje"] = "Salida registrada correctamente.";
+                    TempData["MensajeFichar"] = "Salida registrada correctamente.";
                     TempData["HoraFecha"] = turno.RegistroSalida.ToString();
                 }
             }

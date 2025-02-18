@@ -6,45 +6,55 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Eliminar Turno</h2>
+<link rel="stylesheet" type="text/css" href="~/Assets/css/eliminar.css">
 
-<h3>¿Estás seguro que deseas eliminar este turno?</h3>
-<div>
-    <h4>TurnosHorarios</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.IDUsuario)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.IDUsuario)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Fecha)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Fecha)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.HoraInicio)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.HoraInicio)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.HoraFin)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.HoraFin)
-        </dd>
-    </dl>
+<div class="fondoEliminar">
+    <div class="cabeceraEliminar">
+        <h2>Eliminar turno</h2>
+    </div>
 
-    @using (Html.BeginForm())
-    {
-        @Html.AntiForgeryToken()
-        <div class="form-actions no-color">
-            <input type="submit" value="Eliminar" class="btn btn-danger" /> |
-            @Html.ActionLink("Volver a la lista", "Index")
-        </div>
-    }
+    <h3>¿Estás seguro que deseas eliminar este turno?</h3>
+
+
+    <div class="infoUser">
+        <hr />
+        <dl class="dl-horizontal">
+            <dt class="cabeceraUser">
+                Nombre de usuario
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.IDUsuario)
+            </dd>
+            <dt class="cabeceraUser">
+                Fecha del turno seleccionado
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Fecha)
+            </dd>
+            <dt class="cabeceraUser">
+                Hora inicio del turno
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.HoraInicio)
+            </dd>
+            <dt class="cabeceraUser">
+                Hora fin del turno
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.HoraFin)
+            </dd>
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+    <div class="form-actions no-color">
+        <input type="submit" value="Eliminar turno" class="btn btnSave" /> <br />
+
+        <button class="btn btnSave">
+            @Html.ActionLink("Volver atrás", "Index", null, new { @class = "navLink", style = "color: white;" })
+        </button>
+</div>
+        }
+    </div>
 </div>

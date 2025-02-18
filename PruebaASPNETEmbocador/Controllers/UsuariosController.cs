@@ -5,10 +5,12 @@ using System.Net;
 using System.Security.Cryptography;
 using System.Text;
 using System.Web.Mvc;
+using PruebaASPNETEmbocador.Filters;
 using PruebaASPNETEmbocador.Models;
 
 namespace PruebaASPNETEmbocador.Controllers
 {
+    [SessionCheck]
     public class UsuariosController : Controller
     {
         private EmbocadorEntities1 db = new EmbocadorEntities1();
