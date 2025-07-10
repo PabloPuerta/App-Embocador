@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\",
+  "WorkspaceRootPath": "C:\\Users\\pablo\\Desktop\\App-Embocador\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\pruebaaspnetembocador\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|c:\\users\\pablo\\desktop\\app-embocador\\pruebaaspnetembocador\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|solutionrelative:pruebaaspnetembocador\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -28,11 +28,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\PruebaASPNETEmbocador\\Views\\Home\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\pablo\\Desktop\\App-Embocador\\PruebaASPNETEmbocador\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "PruebaASPNETEmbocador\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\pablo\\Documents\\GitHub\\App-Embocador\\PruebaASPNETEmbocador\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\pablo\\Desktop\\App-Embocador\\PruebaASPNETEmbocador\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "PruebaASPNETEmbocador\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACkAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-19T00:35:48.261Z",
               "EditorCaption": ""
