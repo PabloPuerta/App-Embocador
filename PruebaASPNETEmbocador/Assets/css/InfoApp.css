@@ -1,4 +1,4 @@
-﻿.container-infoApp{
+﻿.container-infoApp {
     width: 100%;
     min-height: 100vh;
     display: -webkit-box;
@@ -18,29 +18,36 @@
     background: linear-gradient(-135deg, #003366, #e11212);
 }
 
-.welcomeTempus{
-    margin: 2% auto 1% auto;
-    background-color: #fff;
-    color: black;
-    padding: 1% 20% 1% 20%;
-    border: 5px solid black;
-    border-radius: 10px;
+body {
+    overflow-y: auto; 
 }
-.welcomeTempus-2 {
+
+.welcomeTempus {
     margin: 0.2% 10% 2% 10%;
     color: black;
     padding: 25px;
     text-align: center;
 }
-    .welcomeTempus-2 img{
-        border: 5px solid black;
-        border-radius: 10px;
-        width: 500px;
-        margin: 1% auto 5% auto;
-    }
-    .welcomeTempus-2 h3{
+    .welcomeTempus h2{
         color: #fff;
     }
-    .welcomeTempus-2 h4 {
+    .welcomeTempus h3 {
         color: #fff;
+    }
+    .welcomeTempus h4 {
+        color: #fff;
+    }
+
+.dis-flex2 {
+    display: flex;
+    align-items: center;
+    gap: 24px; 
+    justify-content: flex-start; 
+}
+    .dis-flex2 img {
+        margin-top: 6%;
+        max-width: 500px;
+        height: auto;
+        border-radius: 8px; 
+        border:solid 3px black;
     }

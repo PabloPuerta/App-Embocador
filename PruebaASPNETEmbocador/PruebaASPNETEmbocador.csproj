@@ -144,7 +144,7 @@
     <Compile Include="Controllers\FicharTurnosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InfoAppController.cs" />
-    <Compile Include="Controllers\InicioAdminsController.cs" />
+    <Compile Include="Controllers\InfoClientesNuevosController.cs" />
     <Compile Include="Controllers\InicioTrabajadoresController.cs" />
     <Compile Include="Controllers\TurnosHorariosController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
@@ -364,8 +364,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\InicioAdmins\Index.cshtml" />
-    <Content Include="Views\InicioAdmins\PanelAdmin.cshtml" />
     <Content Include="Views\InicioTrabajadores\Index.cshtml" />
     <Content Include="Views\Usuarios\Create.cshtml" />
     <Content Include="Views\Usuarios\Delete.cshtml" />
@@ -378,6 +376,7 @@
     <Content Include="Views\TurnosHorarios\Create.cshtml" />
     <Content Include="Views\TurnosHorarios\Delete.cshtml" />
     <Content Include="Views\InfoApp\Index.cshtml" />
+    <Content Include="Views\InfoClientesNuevos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
