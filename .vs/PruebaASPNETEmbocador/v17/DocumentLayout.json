@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\pablo\\Desktop\\App-Embocador\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|c:\\users\\pablo\\desktop\\app-embocador\\pruebaaspnetembocador\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|C:\\Users\\pablo\\Desktop\\App-Embocador\\pruebaaspnetembocador\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|solutionrelative:pruebaaspnetembocador\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|C:\\Users\\pablo\\Desktop\\App-Embocador\\pruebaaspnetembocador\\views\\inicioadmins\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|solutionrelative:pruebaaspnetembocador\\views\\inicioadmins\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|C:\\Users\\pablo\\Desktop\\App-Embocador\\pruebaaspnetembocador\\views\\infoapp\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|solutionrelative:pruebaaspnetembocador\\views\\infoapp\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|c:\\users\\pablo\\desktop\\app-embocador\\pruebaaspnetembocador\\assets\\css\\infoapp.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E66BC0EE-A7C8-4030-BB61-FFB249FA11B0}|PruebaASPNETEmbocador\\PruebaASPNETEmbocador.csproj|solutionrelative:pruebaaspnetembocador\\assets\\css\\infoapp.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +26,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 410,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\pablo\\Desktop\\App-Embocador\\PruebaASPNETEmbocador\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "PruebaASPNETEmbocador\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\pablo\\Desktop\\App-Embocador\\PruebaASPNETEmbocador\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "PruebaASPNETEmbocador\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-10T21:13:24.198Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\pablo\\Desktop\\App-Embocador\\PruebaASPNETEmbocador\\Views\\InicioAdmins\\Index.cshtml",
+              "RelativeDocumentMoniker": "PruebaASPNETEmbocador\\Views\\InicioAdmins\\Index.cshtml",
+              "ToolTip": "C:\\Users\\pablo\\Desktop\\App-Embocador\\PruebaASPNETEmbocador\\Views\\InicioAdmins\\Index.cshtml",
+              "RelativeToolTip": "PruebaASPNETEmbocador\\Views\\InicioAdmins\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-07T10:42:51.704Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\pablo\\Desktop\\App-Embocador\\PruebaASPNETEmbocador\\Views\\InfoApp\\Index.cshtml",
+              "RelativeDocumentMoniker": "PruebaASPNETEmbocador\\Views\\InfoApp\\Index.cshtml",
+              "ToolTip": "C:\\Users\\pablo\\Desktop\\App-Embocador\\PruebaASPNETEmbocador\\Views\\InfoApp\\Index.cshtml",
+              "RelativeToolTip": "PruebaASPNETEmbocador\\Views\\InfoApp\\Index.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-07T10:52:55.161Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
@@ -26,15 +80,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\pablo\\Desktop\\App-Embocador\\PruebaASPNETEmbocador\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "PruebaASPNETEmbocador\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\pablo\\Desktop\\App-Embocador\\PruebaASPNETEmbocador\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "PruebaASPNETEmbocador\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACkAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-19T00:35:48.261Z",
+              "DocumentIndex": 3,
+              "Title": "InfoApp.css",
+              "DocumentMoniker": "C:\\Users\\pablo\\Desktop\\App-Embocador\\PruebaASPNETEmbocador\\Assets\\css\\InfoApp.css",
+              "RelativeDocumentMoniker": "PruebaASPNETEmbocador\\Assets\\css\\InfoApp.css",
+              "ToolTip": "C:\\Users\\pablo\\Desktop\\App-Embocador\\PruebaASPNETEmbocador\\Assets\\css\\InfoApp.css",
+              "RelativeToolTip": "PruebaASPNETEmbocador\\Assets\\css\\InfoApp.css",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACgAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-08-07T11:04:55.502Z",
               "EditorCaption": ""
             }
           ]

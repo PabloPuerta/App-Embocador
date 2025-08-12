@@ -1,0 +1,46 @@
+﻿.container-infoApp{
+    width: 100%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px;
+    background: #e11212;
+    background: -webkit-linear-gradient(-135deg, #003366, #e11212);
+    background: -o-linear-gradient(-135deg, #003366, #e11212);
+    background: -moz-linear-gradient(-135deg, #003366, #e11212);
+    background: linear-gradient(-135deg, #003366, #e11212);
+}
+
+.welcomeTempus{
+    margin: 2% auto 1% auto;
+    background-color: #fff;
+    color: black;
+    padding: 1% 20% 1% 20%;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+.welcomeTempus-2 {
+    margin: 0.2% 10% 2% 10%;
+    color: black;
+    padding: 25px;
+    text-align: center;
+}
+    .welcomeTempus-2 img{
+        border: 5px solid black;
+        border-radius: 10px;
+        width: 500px;
+        margin: 1% auto 5% auto;
+    }
+    .welcomeTempus-2 h3{
+        color: #fff;
+    }
+    .welcomeTempus-2 h4 {
+        color: #fff;
+    }

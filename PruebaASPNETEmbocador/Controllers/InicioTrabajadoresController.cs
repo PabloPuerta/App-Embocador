@@ -47,6 +47,8 @@ namespace PruebaASPNETEmbocador.Controllers
         {
             using(var db = new EmbocadorEntities1())
             {
+                return View("LoginTrabajadores", IDUsuario);
+
                 // Verificar si existe el nombre de usuario
                 var usuarioExistente = db.Usuarios.FirstOrDefault(x => x.Nombre == IDUsuario.Nombre);
 
